@@ -1,0 +1,21 @@
+input, textarea, .form-control {
+    @include box-shadow(none);
+    color: $text-color;
+    background: transparentize($brand-primary,.9);
+
+    &:focus {
+        -webkit-outline: none !important;
+        //@include box-shadow(0 0 8px 0 rgba(255,255,255,.8));
+        border-color: $text-color;
+        background-color: white;
+        color: $brand-primary;
+
+        &::-webkit-input-placeholder {
+            color: lighten($brand-info,20%);
+        }
+    }
+
+    &::-webkit-input-placeholder {
+        color: transparentize($text-color, .4) !important;
+    }
+}

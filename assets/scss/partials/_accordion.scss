@@ -1,0 +1,15 @@
+.accordiontoggle {
+    display: block;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &:not([data-toggle="collapse"]) {
+        cursor: default;
+
+        &:hover {
+            background: transparent;
+        }
+    }
+}

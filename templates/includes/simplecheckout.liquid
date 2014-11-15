@@ -1,0 +1,226 @@
+<div id="buy">
+  <div class="row">
+  <div id="steps" class="col-md-8">
+    <h1>Buch bestellen</h1>
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a class="accordiontoggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                Schritt 1: Produktwahl, Wähle dein Buch
+              </a>
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse in">
+            <div class="panel-body form-horizontal">
+              <div class="row form-group">
+                <div class="col-sm-2">
+                  <div class="small-input">
+                  <div class="input-group">
+                    <span class="input-group-btn">
+                      <button id="gMinus" class="btn btn-default" type="button"> – </button>
+                    </span>
+                    <input id="gr" type="text" class="form-control" value="0">
+                    <span class="input-group-btn">
+                      <button id="gPlus" class="btn btn-default" type="button"> + </button>
+                    </span>
+                  </div><!-- /input-group -->
+                  </div>
+                </div><!-- /.col-lg-6 -->
+                <label class="col-sm-9 small-label control-label">Bildband gross, 120 Abbildungen, Fester Einband CHF 98.-</label>
+              </div><!-- /.row -->
+              <div class="row form-group">
+                <div class="col-sm-2">
+                  <div class="small-input">
+                  <div class="input-group">
+                    <span class="input-group-btn">
+                      <button id="kMinus" class="btn btn-default" type="button"> – </button>
+                    </span>
+                    <input id="kl" type="text" class="form-control" value="0">
+                    <span class="input-group-btn">
+                      <button id="kPlus" class="btn btn-default" type="button"> + </button>
+                    </span>
+                  </div><!-- /input-group -->
+                </div>
+                </div><!-- /.col-lg-6 -->
+                <label class="col-sm-9 small-label control-label">Bildband klein, 120 Abbildungen, Softcover  CHF 68.-</label>
+              </div><!-- /.row -->
+              <div class="form-group">
+                  <div class="col-sm-8" style="padding-top: 10px;">
+                    <p><span class="glyphicon glyphicon-credit-card"></span>  Wir akzeptieren momentan nur Kreditkarte als Zahlungsmitel.</p>
+                  </div>
+                  <div class="col-sm-4">
+                    <button id="submitone" type="submit" disabled data-parent="#accordion" data-toggle="collapse" href="#collapseTwo" class="btn btn-default pull-right">Weiter zu Schritt 2</button>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a class="accordiontoggle" id="opentwo" data-parent="#accordion" href="#collapseTwo">
+                Schritt 2: Lieferadresse
+              </a>
+            </h4>
+          </div>
+          <div id="collapseTwo" class="panel-collapse collapse">
+            <div class="panel-body">
+              <form class="form-horizontal" role="form" data-toggle="validator">
+                <div class="form-group">
+                  <label for="inputName" class="col-sm-3 control-label">Name & Vorname *</label>
+                  <div class="col-sm-7">
+                    <input type="text" required class="form-control required" id="inputName" data-error="Das Feld 'Name & Vorname' darf nicht leer sein" placeholder="Name Vorname">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="Address" class="col-sm-3 control-label">Adresse *</label>
+                  <div class="col-sm-5">
+                    <input type="text" required class="form-control required" id="Address" data-error="Das Feld 'Adresse' darf nicht leer sein" placeholder="Strasse">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                  <div class="col-sm-2">
+                    <input type="text" required class="form-control required" id="Number" data-error="Das Feld 'Hausnummer' darf nicht leer sein" placeholder="Nr">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="Address2" class="col-sm-3 control-label">Adressezeile 2</label>
+                  <div class="col-sm-7">
+                    <input type="text" class="form-control" id="Address2" placeholder="Adresszeile 2">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="Zip" class="col-sm-3 control-label">PLZ / Ort *</label>
+                  <div class="col-sm-2">
+                    <input type="number" min="1111" max="9999" required class="form-control required" id="Zip" placeholder="PLZ" data-error="Bitte fülle PLZ im Format 1234 aus">
+                  </div>
+                  <div class="col-sm-5">
+                    <input type="text" required class="form-control required" id="Place" placeholder="Ort" data-error="Das Feld 'Ort' darf nicht leer sein">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="Email" class="col-sm-3 control-label">Email *</label>
+                  <div class="col-sm-7">
+                    <input type="email" required class="form-control required" id="Email" placeholder="Email" data-error="E-Mail Adresse ist nicht gültig">
+                    <div class="help-block with-errors"></div>
+                    <p><p><span class="glyphicon glyphicon-info-sign"></span> Wir senden dir nur E-Mails im Bezug zu deiner Bestellung.<br>Wir werden deine Adresse <b>niemals</b> weitergeben und dir <b>keine</b> Werbung oder Newsletter ohne deine Zustimmung zusenden.</p>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-4 col-sm-offset-3">* Obligatorische Felder</div>
+                  <div class="col-sm-5">
+                    <button id="submittwo" disabled data-toggle="collapse" data-parent="#accordion" href="#collapseThree" type="submit" class="btn btn-default pull-right">Weiter zu Schritt 3</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a class="accordiontoggle" id="openthree" data-parent="#accordion" href="#collapseThree">
+                Schritt 3: Zahlungsangaben
+              </a>
+            </h4>
+          </div>
+          <div id="collapseThree" class="panel-collapse collapse">
+            <div class="panel-body">
+              <form class="form-horizontal" role="form" data-toggle="validator">
+                <div class="form-group">
+                  <label for="inputNameKK" class="col-sm-4 control-label">Name auf Kreditkarte *</label>
+                  <div class="col-sm-5">
+                    <input type="text" required class="form-control" data-error="Das Feld 'Name' darf nicht Leer sein" id="inputNameKK" placeholder="Name">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="KKnr" class="col-sm-4 control-label">Kreditkarten Nummer *</label>
+                  <div class="col-sm-5">
+                    <input type="text" data-error="Invalide Kreditkartennummer" data-minlength="19" data-mask="0000 0000 0000 0000" required class="form-control" id="KKnr" placeholder="0000 0000 0000 0000">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="row ccrow">
+                <div class="form-group col-sm-6">
+                  <label for="Valid" class="col-sm-8 control-label">Monat / Jahr *</label>
+                  <div class="col-sm-4">
+                    <input type="text" data-error="Format MM / JJ" data-minlength="4" data-mask="00 / 00" required class="form-control" id="month" placeholder="MM / JJ">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="form-group cvcrow col-sm-5">
+                  <label for="CVC" class="col-sm-4 control-label">CVC *&nbsp;<a id="popcvc" data-container="body" data-toggle="popover"  data-placement="top" data-content="Die CVC Nummer befindet sich auf deiner Kreditkarte auf der Rückseite beim Unterschrift-Feld."><span class="glyphicon glyphicon-info-sign"></span></a></label>
+                  <div class="col-sm-4">
+                    <input type="text" data-error="Invalide CVC" min="111" max="999" data-minlength="3" required class="form-control" id="CVC" data-mask="999" placeholder="000">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-sm-9">
+                    <p><span class="glyphicon glyphicon-info-sign"></span>  Wir Speichern deine Kreditkarten Informationen nicht.<br>* Obligatorische Felder</p>
+                  </div>
+                  <div class="col-sm-3">
+                    <button id="submitthree" disabled data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="btn btn-default pull-right">Weiter zum Bestätigen</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div id="check" class="col-md-4">
+    <h1>&nbsp;</h1>
+    <div class="well orderdetail">
+      <div id="details">
+        <div id="choice">
+          <legend class="first">Gewähltes Produkt</legend>
+          <ul>
+            <li><span id="gross">0</span> &times; Bildband gross, Fester Einband <span class="pull-right">CHF <span id="pgross">0</span>.-</span></li>
+            <li><span id="klein">0</span> &times; Bildband klein, Softcover <span class="pull-right">CHF <span id="pklein">0</span>.-</span></li>
+            <li class="total">Total <span class="pull-right" id="total">CHF 0.-</span></li>
+          </ul>
+        </div>
+        <div id="addresschoice" style="display: none">
+        <legend>Lieferadresse</legend>
+        <p>Die Bestellung wird an folgende Adresse geliefert:</p>
+        <ul>
+          <li><span id="name"></span></li>
+          <li><span id="address"></span></li>
+          <li><span id="address2"></span></li>
+          <li><span id="place"></span></li>
+        </ul>
+        </div>
+        <div id="payment" style="display: none">
+        <legend>Zahlungsangaben</legend>
+        <p>Es wird folgende Kreditkarte belastet:</p>
+        <ul>
+          <li><span id="kkname"></span></li>
+          <li>XXXX XXXX XXXX <span id="kknumber"></span></li>
+          <li><span id="kkcvc"></span></li>
+        </ul>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-12 note">
+            Wichtig: Durch das aufgeben einer Bestellung stimmst Du unseren <a href="">AGB's</a> zu.
+          </div>
+          <div class="col-sm-12" id="submit">
+            {% include "processbutton" %}
+          </div>
+        </div>
+      </div>
+      <div id="confirmation">
+        <h2><span class="glyphicon glyphicon-ok"></span><br>Vielen Dank!</h2>
+        <p>Deine Bestellung wurde erfolgreich ausgeführt.<br>Wir haben Dir eine Bestätigungsmail gesendet.</p>
+        <p>Bei Fragen zur Bestellung gib bitte die Bestellnummer: <b>5367154</b> an.</p>
+        <a class="btn btn-primary" id="new">Neue Bestellung aufgeben</a>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+h2.brand {
+    margin: 10px 0px 0px;
+
+    img, span {
+        float: left;
+    }
+
+    img {
+        width: 50px; height: 50px;
+        //border: solid 1px white;
+        border-radius:8px;
+        border-radius:8px;
+        //background: $brand-primary;
+        margin: -4px 9px 0px 0px;
+    }
+}
+.navbar {
+    border-bottom: 1px solid $text-color;
+    margin: 0;
+    background: $body-bg;
+}
+.nav li a { border: 1px solid transparent; padding: 20px; font-size: 1.7rem }
+.nav li.active a { background: $brand-primary; color: white; border: 1px solid white; span.glyphicon { margin-right: 5px;} }
+
+.nav {
+    margin: 0px;
+
+    li a {
+        border-top-width: 0px !important;
+        border-bottom-width: 0px !important;
+    }
+}

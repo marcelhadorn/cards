@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- TODO: Proxima Laden -->
+        <meta charset="utf-8">
+        <!-- Title block allowing child pages to override -->
+        <title>{% block title %}Empty{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="apple-touch-icon" href="/assets/images/bp-touch.png">
+        <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+        <!-- Styles -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        {% comment %}<script type="text/javascript" src="//use.typekit.net/nxn5emc.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>{% endcomment %}
+        {{ "/assets/css/style.css" | asset_url | stylesheet_tag }}
+        <!-- Style block allowing child pages to inject their own styles -->
+        {% block styles %}{% endblock %}
+    </head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="70">
+        {% comment %}
+        <header>
+            {% include "navbar" %}
+        </header>
+        {% endcomment %}
+        {% block teaser %}
+        {% endblock %}
+        <div id="wrapper" class="container">
+            <!-- Content block, child page inject content -->
+            {% block content %}{% endblock %}
+        </div>
+        <!-- Script block allowing child pages to inject their own scripts -->
+        {% block scripts %}{% endblock %}
+        {% comment %}
+        <footer>
+            {% include "footer" %}
+        </footer>
+        {% endcomment %}
+        {{ "application.min.js" | asset_url | script_tag }}
+        {{ "main.js" | asset_url | script_tag }}
+    </body>
+</html>

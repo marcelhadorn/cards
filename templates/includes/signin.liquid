@@ -1,0 +1,31 @@
+<!--
+#################################################
+App: Blueprint, Author: Marcel Hadorn (@marc3llo)
+#################################################
+"Signin" with Local Storage
+-->
+<div id="signinform">
+	<div>
+		<form role="form" class="well">
+		  	<div class="form-group">
+		  	  <label for="exampleInputEmail1">Username</label>
+		  	  <input type="text" class="form-control" id="user" placeholder="Enter username">
+		  	</div>
+		  	<div class="form-group">
+		  	  <label for="exampleInputPassword1">Password</label>
+		  	  <input type="password" class="form-control" id="password" placeholder="Password">
+		  	</div>
+		  	<button type="submit" id="signinbtn" class="btn btn-primary">Signin</button>
+
+		  	<hr>
+			<h4>Test Accounts</h4>
+			<ul class="bulless">
+			{% for user in global.users %}
+				<li>User: <b>{{user.username}}</b>, Password: {{user.password}}</li>
+			{% endfor %}
+			</ul>
+		</form>
+	</div>
+</div>
+
+

@@ -1,0 +1,20 @@
+[
+  {
+    "directory": false,
+    "key": "index",
+    "name": "Index",
+    "url": "/index"
+  },
+  {
+    "directory": false,
+    "key": "example",
+    "name": "Example",
+    "url": "/example"
+  },
+  {
+    "directory": false,
+    "key": "journal",
+    "name": "Journal",
+    "url": "/journal"
+  }
+]

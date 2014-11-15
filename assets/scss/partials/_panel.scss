@@ -1,0 +1,25 @@
+#accordion.panel-group {
+    .panel {
+        background-color: transparent;
+        border-color: $text-color;
+    }
+    
+    .panel-heading {
+        background-color: transparentize(darken($body-bg, 30%),.6);
+        color: $text-color;
+        padding: 1px 0px;
+    
+        a {
+            display: block;
+            padding: 10px;
+            
+            &:hover {
+                background: darken($body-bg, 20%);
+            }
+        }
+    }
+    
+    .panel-body, .well {
+        padding-bottom: 0px;
+    }
+}

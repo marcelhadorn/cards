@@ -1,0 +1,123 @@
+.carousel {
+    height: 600px;
+
+    @media screen and (max-width: 1024px) {
+        height: 500px
+    }
+
+    @media screen and (max-width: 320px) {
+        height: 400px
+    }
+}
+
+.carousel-inner {
+
+  > .item {
+        @include transition(1s ease-in-out left);
+    }
+
+    .thumb {
+        margin-top:20px;
+        margin-bottom: 10px;
+        background-size: cover;
+        height: 560px;
+        
+        @media screen and (max-width: 1024px) {
+            height: 450px
+        }
+
+        @media screen and (max-width: 320px) {
+            height: 300px
+        }
+
+        width: 100%;
+        background-color: transparentize(darken($body-bg, 20%),.6);
+        border: 1px solid darken($body-bg, 25%);
+        @include box-shadow(0 2px 4px 0 rgba(0,0,0,.1));
+        
+        .glyphicon {
+            position: relative;
+            top: 50% !important; left: 50%;
+            margin: -38px 0 0 -35px;
+
+            &:before {
+                font-size: 5em;
+                color: $text-color;
+            }
+        }
+
+        p {
+            position: absolute;
+            top: 40px;
+            margin-left: 15px;
+        }
+    }
+
+    .item:nth-child(2) {
+        .thumb {
+            height: 450px;
+            width: 80%;
+            margin: 70px 0% 70px 20%;
+
+            @media screen and (max-width: 1024px) {
+                height: 380px
+            }
+
+            @media screen and (max-width: 320px) {
+                height: 280px
+            }
+
+            p {
+                position: absolute;
+                top: 80px;
+                margin-left: 15px;
+            }
+        }
+
+        div:nth-child(2) {
+            .thumb{
+                margin: 70px 20% 70px 0%;
+
+                @media screen and (max-width: 1024px) {
+                    margin: 20px 15% 120px;
+                    width: 70%;
+                }
+
+                @media screen and (max-width: 320px) {
+                    margin: 20px 0% 120px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.carousel-indicators li, .carousel-indicators li.active {
+    width: 17px; height: 17px;
+    margin: 1px 5px;
+
+    border-color: $text-color;
+}
+
+.carousel-indicators li.active {
+    background-color: $text-color;
+}
+
+.carousel-caption {
+    text-align: left;
+    width: 100%;
+    left: 0%;
+    margin: 0 auto;
+
+    p {
+        width: 50%;
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
+    }
+
+    h1, h2, h3 {
+        color: $text-color;
+    }
+}

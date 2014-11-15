@@ -1,0 +1,23 @@
+        {% collection "portfolio" %}
+          
+          {% for post in collection.items %}
+            
+            <article class="portoflio">
+            <header>
+            	<h3>{{ post.title }}</h3>
+            </header>
+            <section class="content">
+            <img src="{{ post.img }}" class="featured">
+            {{ post.body }}
+          	</section>
+          	
+          	{% for items in collection.tags %}
+				<footer class="tags">
+					{{ items.tags }}
+				</footer>
+			{% endfor %}
+
+          	</article>
+          {% endfor %}
+          
+        {% endcollection %}

@@ -1,0 +1,102 @@
+{
+	"app": {
+		"name": "Cards",
+		"icon": "icon.png"
+	},
+	"cards":[
+		{
+			"id": "001",
+			"cat": "1",
+			"de": "herausgeben, emittieren, ausstellen",
+			"en": "to issue"
+		},
+		{
+			"id": "002",
+			"cat": "1",
+			"de": "kündigen",
+			"en": "to give notice"
+		},
+		{
+			"id": "003",
+			"cat": "1",
+			"de": "Können Sie mich mit Mr. Brown verbinden?",
+			"en": "Can you redirect me to Mr. Brown?"
+		},
+		{
+			"id": "004",
+			"cat": "1",
+			"de": "herausgeben, emittieren, ausstellen",
+			"en": "to issue"
+		},
+		{
+			"id": "005",
+			"cat": "1",
+			"de": "kündigen",
+			"en": "to give notice"
+		},
+		{
+			"id": "006",
+			"cat": "1",
+			"de": "Können Sie mich mit Mr. Brown verbinden?",
+			"en": "Can you redirect me to Mr. Brown?"
+		}
+	],
+	"pages":[
+		{
+			"title": "home",
+			"href": "/",
+			"class": "",
+			"icon": "glyphicon glyphicon-home"
+		},
+		{
+			"title": "about",
+			"href": "about.html",
+			"class": "",
+			"icon": "glyphicon glyphicon-map-marker"
+		},
+		{
+			"title": "contact",
+			"href": "contact.html",
+			"class": "",
+			"icon": "glyphicon glyphicon-envelope"
+		}
+	],
+	"users": [
+		{
+			"username": "Marcello",
+			"password": "13",
+			"name": {
+				"first": "Marcel",
+				"last": "Hadorn"
+			},
+			"occupation": "Interaction Designer",
+			"role": "Superadmin"
+		},
+		{
+			"username": "Daniel",
+			"password": "Null",
+			"name": {
+				"first": "Daniel",
+				"last": "Ehrensperger"
+			},
+			"occupation": "Interaction Designer",
+			"role": "Fag"
+		},
+		{
+			"username": "Admin",
+			"password": "admin",
+			"name": {
+				"first": "Rick",
+				"last": "Ross"
+			},
+			"occupation": "The Boss",
+			"role": "Admin"
+		}
+	],
+	"icon": [
+		{
+			"home": "<span class='glyphicon glyphicon-home'></span>"
+		}
+	],
+	"lorem": "<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros..</p>"
+}

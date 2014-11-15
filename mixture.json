@@ -1,0 +1,58 @@
+{
+  "autoPrefixer": {
+    "active": false,
+    "browsers": [
+      "last 2 version",
+      "> 1%",
+      "ie 8",
+      "ie 7"
+    ]
+  },
+  "convertHtml": {
+    "relativePaths": false
+  },
+  "debug": true,
+  "domain": null,
+  "lintScripts": false,
+  "ignoreDir": ["assets/js/bower_components"],
+  "modelSource": null,
+  "optimiseImages": false,
+  "preprocessorLocations": [
+    "assets"
+  ],
+  "preprocessorScriptOutput": "/assets/js",
+  "preprocessorStyleOutput": "/assets/css",
+  "projectDescription": "Language Trainer",
+  "projectName": "cards",
+  "publishedId": "13319",
+  "routes": [
+    {
+      "redirect": null,
+      "route": "page-:page",
+      "template": "journal"
+    },
+    {
+      "redirect": null,
+      "route": "tag/:tag",
+      "template": "journal"
+    }
+  ],
+  "sass": {
+    "cache": false,
+    "debugInfo": true,
+    "globbing": false,
+    "lineNumbers": false,
+    "outputStyle": "nested",
+    "sourceMap": false,
+    "useLibSass": true
+  },
+  "serverHostname": null,
+  "serverPort": null,
+  "simpleModePartnerServer": null,
+  "sitemap": false,
+  "templateDefaultLayout": "layout",
+  "templateDefaultPage": "index",
+  "templateDirectory": "templates",
+  "type": "mixture",
+  "useCompass": false
+}

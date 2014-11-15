@@ -1,0 +1,14 @@
+<div id="viewport">
+    {% for card in global.cards %}
+    <div class="cc {% if forloop.first %}active{% endif %}">
+        <div class="card" id="card{{ card.id }}" class="cat{{ card.cat }}">
+            <div class="content de">
+                {{ card.de }}
+            </div>
+            <div class="content en">
+                {{ card.en }}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>

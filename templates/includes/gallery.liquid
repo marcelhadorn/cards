@@ -1,0 +1,51 @@
+<div id="gallery" class="row isin">
+    {% for image in global.images %}
+    <div class="col-xs-6 col-md-4">
+        <a data-toggle="cellobox" href="img{{image.id}}" data-id="img{{image.id}}" class="cb thumbnail">
+          <p>Bild</p>
+          <span class="glyphicon glyphicon-picture"></span>
+          {% comment %}<img src="images/ph.png" style="background-image: url('{{url}}');" alt="{{caption}}">{% endcomment %}
+        </a>
+    </div>
+    {% endfor %}
+    {% for image in global.images %}
+    <div id="img{{image.id}}" class="cellobox fade"  tabindex="-1" role="dialog" aria-hidden="true">
+      <span class="glyphicon glyphicon-picture"></span>
+      <!-- <img src="{{url}}"> -->
+    </div>
+    {% endfor %}
+    <div class="backdrop">
+    </div>
+</div>
+
+{% block scripts %}
+<script type="text/javascript">
+    $(document).ready(function(){
+      // Simple cellobox by Marcel Hadorn
+      // set default values
+      var id = 'img';
+      var w = '900';
+      var lm = '-450';
+    
+      // trigger the click on a image
+      $('.cb').click(function(){
+        event.preventDefault();
+        // set which image was clicked
+        id = $('#' + $(this).attr("data-id"));
+        // get image width and center it
+        w = id.width();
+        lm = -(w / 2);
+        id.css('margin-left', lm);
+        id.addClass('in');
+        // show backdrop
+        $('.backdrop').show();
+      });
+    
+      $('.backdrop, .cellobox').click(function(){
+        // close image
+        $('.cellobox').removeClass('in');
+        $('.backdrop').hide();
+      });
+    });
+</script>
+{% endblock %}

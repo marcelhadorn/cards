@@ -1,0 +1,28 @@
+{
+  "name": "blueprint",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Marc3llo/blueprint",
+  "authors": [
+    "Marcel Hadorn <marcel@duotones.ch>"
+  ],
+  "description": "blueprint components",
+  "main": "bower.json",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-validator": "~0.6.0",
+    "jQuery-Mask-Plugin": "~1.10.12",
+    "jquery-ui": "~1.11.2",
+    "modernizr": "~2.8.3",
+    "velocity": "~1.1.0",
+    "jquery-mousewheel": "~3.1.12",
+    "jquery-touchswipe": "git@github.com:mattbryson/TouchSwipe-Jquery-Plugin.git#~1.6.6",
+    "jquery.transform.js": "git@github.com:louisremi/jquery.transform.js.git"
+  }
+}

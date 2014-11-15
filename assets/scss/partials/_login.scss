@@ -1,0 +1,46 @@
+.isin {
+    display: none;
+}
+
+
+body.signedin {
+    .isin {
+        display: block;
+    }
+    .isout {
+        display: none;
+    }
+}
+
+[unit="profile"] ul {
+    display: none;
+    padding-left: 18px;
+}
+
+#signinform {
+    margin-bottom: 20px !important;
+}
+
+#signoutform {
+    display: none;
+
+    h4 {
+        margin: 6px 0 0 15px;
+        float: left;
+    }
+
+    .btn {
+        float: right;
+        margin: 0 15px 15px 0;
+    }
+}
+
+body.signedin {
+    #signinform {
+        display: none;
+    }
+
+    #signoutform {
+        display: block;
+    }
+}

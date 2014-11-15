@@ -1,0 +1,53 @@
+.btn.process {
+    min-width: 133px;
+    margin:10px 0 15px;
+    background: #2570a5; /* Old browsers */
+    background: -moz-linear-gradient(left, #2570a5 50%, #1e4e80 50%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%,#2570a5), color-stop(50%,#1e4e80)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, #2570a5 50%,#1e4e80 50%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, #2570a5 50%,#1e4e80 50%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, #2570a5 50%,#1e4e80 50%); /* IE10+ */
+    background: linear-gradient(to right, #2570a5 50%,#1e4e80 50%); /* W3C */
+    background-size: 200% 200%;
+    background-position: 100% 0%;
+
+    .loading, .finished {
+        display: none;
+    }
+
+    &.start {
+        -webkit-animation: loading 3s linear forwards;
+
+        .default {
+            display: none;
+        }
+
+        .loading {
+            display: inline-block;
+        }
+    }
+
+    &.end {
+        -webkit-animation: loading 3s linear forwards;
+
+        .default {
+            display: none;
+        }
+
+        .loading {
+            display: none;
+        }
+
+        .finished {
+            display: inline-block;
+        }
+    }
+}
+
+@-webkit-keyframes loading {
+    0% { background-position: 100% 0%; };
+    20% { background-position: 60% 0%; };
+    50% { background-position: 40% 0%; };
+    80% { background-position: 5% 0%;  };
+    100% { background-position: 0% 0%; };
+}

@@ -1,0 +1,57 @@
+$cards: 4;
+$height: 250px;
+
+#viewport {
+    min-width: 100;
+    display: block;
+    position: relative;
+    padding-top: 20%;
+
+    @media screen and (orientation : landscape) {
+        padding-top: 0%;
+        margin-top: -10%;
+    }
+}
+
+.cc {
+    width: 89%;
+    margin: 5%;
+    position: absolute;
+    display: inline-block;
+    @include perspective(500);
+    @include perspective-origin(50% 50%);
+    @include transform(translateX(110%));
+    //@include transition(.5s $ease-in-out-quad all);
+
+    &.active {
+        @include transform(translateX(0));
+    }
+}
+
+// Card Design
+.card {
+    height: $height;
+    @include transform-style(preserve-3d);
+    @include transform-origin(50% 50%);
+    @include transition(.5s $ease-in-out-quad all);
+
+    .content {
+        padding: 25px 30px;
+        font-size: 2em;
+        height: $height;
+        background: transparentize(darken($brand-primary, 20%), .4);
+        @include backface-visibility(hidden);
+        border-left: 6px solid white;
+
+        &.de {
+            z-index: 2;
+        }
+
+        &.en {
+            @include transform(translateY(-$height) rotateX(180deg));
+            background: transparentize(white, .4);
+            border-left-color: darken($brand-primary, 20%);
+            color: $brand-primary;
+        }
+    }
+}

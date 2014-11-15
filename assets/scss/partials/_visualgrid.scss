@@ -1,0 +1,148 @@
+html.showgrid {
+    @media (min-width: 1170px) {
+        body {
+            background: -webkit-linear-gradient(
+                            90deg,
+                            $grid-horizontal,
+                            $grid-horizontal        4.545%,
+                            $grid-transparent       4.545%,
+                            $grid-transparent       100%
+                        ),
+                        -webkit-linear-gradient(
+                            0deg,
+                            $grid-transparent,
+                            $grid-transparent        34.5%,
+                            $grid-vertical-dark      34.5%,
+                            $grid-vertical-dark      35.5%,
+                            $grid-vertical-light     35.5%,
+                            $grid-vertical-light     64%,
+                            $grid-vertical-dark      64%,
+                            $grid-vertical-dark      65.5%,
+                            $grid-transparent        65.5%,
+                            $grid-transparent        100%
+                        );
+            background-size: 1.692em 1.692em, 6.992em 7.692em; /* 7.692 - 2.308 = 5.384 */
+            background-position: left top, center top;
+        }
+    }
+    @media (max-width: 1199px) and (min-width: 980px) {
+        body {
+            background: -webkit-linear-gradient(
+                            90deg,
+                            $grid-horizontal,
+                            $grid-horizontal        4.545%,
+                            $grid-transparent       4.545%,
+                            $grid-transparent       100%
+                        ),
+                        -webkit-linear-gradient(
+                            0deg,
+                            $grid-transparent,
+                            $grid-transparent       31.5%,
+                            $grid-vertical-dark     31.5%,
+                            $grid-vertical-dark     32.5%,
+                            $grid-vertical-light    32.5%,
+                            $grid-vertical-light    67.5%,
+                            $grid-vertical-dark     67.5%,
+                            $grid-vertical-dark     68.5%,
+                            $grid-transparent       68.5%,
+                            $grid-transparent       100%
+                        );
+            background-size: 1.692em 1.692em, 5.804em 6.154em;
+            background-position: left top, center top;
+        }
+    }
+    @media (max-width: 979px) {
+        body {
+            background: -webkit-linear-gradient(
+                            90deg,
+                            $grid-horizontal,
+                            $grid-horizontal        4.545%,
+                            $grid-transparent       4.545%,
+                            $grid-transparent       100%
+                        ),
+                        -webkit-linear-gradient(
+                            0deg,
+                            $grid-transparent,
+                            $grid-transparent       29.5%,
+                            $grid-vertical-dark     29.5%,
+                            $grid-vertical-dark     31.5%,
+                            $grid-vertical-light    31.5%,
+                            $grid-vertical-light    69.5%,
+                            $grid-vertical-dark     69.5%,
+                            $grid-vertical-dark     71.5%,
+                            $grid-transparent       71.5%,
+                            $grid-transparent       100%
+                        );
+            background-size: 1.692em 1.692em, 4.469em 4.769em;
+            background-position: left top, center top;
+        }
+    }
+    @media (max-width: 760px){
+        body {
+            background: -webkit-linear-gradient(
+                            90deg,
+                            $grid-horizontal,
+                            $grid-horizontal        4.545%,
+                            $grid-transparent       4.545%,
+                            $grid-transparent       100%
+                        );
+            background-size: 1.692em 1.692em;
+            background-position: left top;
+        }
+    }
+}
+
+html.pixelgrid, html.pixelgrid .navbar {
+            background: -webkit-linear-gradient(
+                            90deg,
+                            $pixelgrid               0px,
+                            $grid-transparent        0px,
+                            $grid-transparent        9px,
+                            $pixelgrid              10px,
+                            $grid-transparent       10px,
+                            $grid-transparent       19px,
+                            $pixelgrid              20px,
+                            $grid-transparent       20px,
+                            $grid-transparent       29px,
+                            $pixelgrid              30px,
+                            $grid-transparent       30px,
+                            $grid-transparent       39px,
+                            $pixelgrid              40px,
+                            $grid-transparent       40px,
+                            $grid-transparent       49px,
+                            $pixelgrid-strong       50px,
+                            $grid-transparent       50px
+                        ),
+                        -webkit-linear-gradient(
+                            0deg,
+                            $grid-transparent,
+                            transparent              0px,
+                            $grid-transparent        0px,
+                            $grid-transparent        4px,
+                            $pixelgrid-strong        5px,
+                            $grid-transparent        5px,
+                            $grid-transparent       14px,
+                            $pixelgrid              15px,
+                            $grid-transparent       15px,
+                            $grid-transparent       24px,
+                            $pixelgrid              25px,
+                            $grid-transparent       25px,
+                            $grid-transparent       34px,
+                            $pixelgrid              35px,
+                            $grid-transparent       35px,
+                            $grid-transparent       44px,
+                            $pixelgrid              45px,
+                            $grid-transparent       45px,
+                            $grid-transparent       54px,
+                            $pixelgrid              55px,
+                            $grid-transparent       55px
+                        ),
+                        $body-bg;
+            background-size: 100% 50px, 50px 100%, 100% 100%; /* 7.692 - 2.308 = 5.384 */
+            background-position: center top, center 5px, center center;
+
+}
+
+html.pixelgrid .navbar {
+    background-position: center top, center 5px, center center;
+}

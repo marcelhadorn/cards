@@ -1,0 +1,117 @@
+html {
+    background: $body-bg;
+    height: 100%;
+}
+
+body {
+    background: transparent;
+    min-height: 100%;
+}
+
+* {
+    text-shadow: none !important;
+}
+
+p {
+    color: $text-color;
+
+    &.lead span {
+        font-size: .8em !important;
+    }
+}
+
+a:not(.accordiontoggle):not(.btn) {
+    color: $text-color;
+    border-bottom: 2px solid transparentize($text-color, .5);
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: none;
+        border-bottom: 2px solid transparentize($text-color, 0);
+    }
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+.content {
+    padding-top: 20px;
+}
+
+.bulless {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.well {
+    background-color: transparent;
+    @include box-shadow(none);
+    padding-bottom: 10px !important;
+    border-color: $text-color;
+}
+
+/* Custom page header */
+header {
+    height: 55px;
+    position: fixed;
+    top: 0;
+}
+
+/* Make the masthead heading the same height as the navigation */
+header h2 {
+    line-height: 40px;
+}
+
+footer {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 19px;
+    border-top: 1px solid #e5e5e5;
+}
+
+#wrapper {
+    height: 100%;
+    min-height: 100%;
+    position: absolute;
+    padding: 60px 0;
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    overflow: hidden;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform: translate3d(0,0,0);
+}
+
+.footer {
+    color: #777;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
+
+.jumbotron {
+    border: 1px solid white;
+}
+
+.teaser {
+    border-bottom: 1px solid $text-color;
+}
+
+.contact {
+    margin: 0px auto 30px;
+    padding: 10px 20px 20px;
+    text-align: center;
+    background-color: white;
+    color: $brand-info;
+    p {
+        color: $brand-info;
+        font-size: 1.2em;
+    }
+}
+

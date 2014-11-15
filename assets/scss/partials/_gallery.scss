@@ -1,0 +1,103 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    display: none;
+    overflow: auto;
+    overflow-y: scroll;
+    @include transition(.5s cubic-bezier(.52,-0.11,.54,1.17) all);
+    background-color: transparentize($body-bg, .3);
+
+    &.in {
+        display: block;
+    }
+}
+
+.cellobox {
+    display: none;
+    position: fixed;
+    min-width: 480px;
+    min-height: 480px;
+    outline: 0;
+    top: 50px;
+    left: 50%;
+    z-index: 99999;
+    margin: 0px 0 0 -400px;
+    border: 1px solid white;
+    @include box-shadow(0px 3px 6px rgba(0,0,0,.2));
+
+    &.fade {
+        @include transition(.5s cubic-bezier(.52,-0.11,.54,1.17) top, .5s cubic-bezier(.52,-0.11,.54,1.17) opacity);
+    }
+
+    &.in {
+        top: 50px;
+        display: block;
+        opacity: 1;
+    }
+}
+
+#gallery, .imagecont {
+    .thumbnail, .thumbnail img {
+        background-size: cover;
+        height: 200px;
+        width: 100%;
+
+        p {
+            position: absolute;
+            top: 10px;
+            margin-left: 15px;
+        }
+    }
+
+    .thumbnail, .cellobox {
+        background: transparentize($body-bg,.6);
+        background-color: transparentize(darken($body-bg, 20%),.6);
+
+        &:hover {
+            background-color: rgba(255,255,255,.3);
+            border-color: white;
+        }
+
+        .glyphicon {
+            position: relative;
+            top: 50% !important; left: 50%;
+            margin: -38px 0 0 -35px;
+
+            &:before {
+                font-size: 5em;
+                color: $text-color;
+            }
+        }
+    }
+
+    .cellobox {
+        background: white;
+
+        &:hover {
+            background-color: rgba(255,255,255,.8);
+        }
+
+        .glyphicon {
+            position: relative;
+            margin-top: 41%;
+
+            &:before {
+                color: $brand-primary;
+            }
+        }
+    }
+}
+
+#gallery.row {
+    margin-top: 0px;
+}
+
+.imagecont {
+    .thumbnail:hover {
+        background-color: transparentize($brand-info,.6);
+    }
+}

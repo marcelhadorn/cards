@@ -1,0 +1,15 @@
+/*
+#################################################
+App: Blueprint, Author: Marcel Hadorn (@marc3llo)
+#################################################
+*/
+$icon-font-path: "/assets/fonts/bootstrap";
+
+// Uncomment to remove blueprint style variables
+@import 'partials/blueprint';
+
+// Twitter Bootstrap & Blueprint Base
+@import 'bootstrap/bootstrap';
+@import 'bourbon/bourbon';
+@import 'blueprint';
+

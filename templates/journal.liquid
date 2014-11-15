@@ -1,0 +1,16 @@
+{% layout "layout" %}
+{% block content %}	
+	{% collection "article" by 5 query 'tags={{ mixture.route.tag }}' order desc %}
+		{% if collection.current_page > collection.pages and collection.size > 0 %}
+			{% include "articles/paged-too-far" %}
+		{% elseif collection.size == 0 %}
+			{% include "articles/no-articles" %}
+		{% else %}
+			<div class="row">
+			{% assign currentpage = collection.current_page %}
+			{% include "articles/article" with collection.items %}
+			</div>
+			{% include "articles/paging" %}
+		{% endif %}
+	{% endcollection %}
+{% endblock %}	
