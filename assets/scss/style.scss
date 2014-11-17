@@ -9,6 +9,7 @@ $icon-font-path: "/assets/fonts/bootstrap";
 @import 'partials/blueprint';
 
 // Twitter Bootstrap & Blueprint Base
+@import 'scss/font-awesome.scss';
 @import 'bootstrap/bootstrap';
 @import 'bourbon/bourbon';
 @import 'blueprint';

@@ -17,7 +17,7 @@
         <!-- Style block allowing child pages to inject their own styles -->
         {% block styles %}{% endblock %}
     </head>
-    <body data-spy="scroll" data-target=".navbar" data-offset="70">
+    <body data-spy="scroll" data-target=".navbar" data-offset="70" class="random-off">
         {% comment %}
         <header>
             {% include "navbar" %}
@@ -31,11 +31,9 @@
         </div>
         <!-- Script block allowing child pages to inject their own scripts -->
         {% block scripts %}{% endblock %}
-        {% comment %}
         <footer>
             {% include "footer" %}
         </footer>
-        {% endcomment %}
         {{ "application.min.js" | asset_url | script_tag }}
         {{ "main.js" | asset_url | script_tag }}
     </body>

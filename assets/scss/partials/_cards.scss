@@ -6,6 +6,7 @@ $height: 250px;
     display: block;
     position: relative;
     padding-top: 20%;
+    height: 350px;
 
     @media screen and (orientation : landscape) {
         padding-top: 0%;
@@ -13,18 +14,42 @@ $height: 250px;
     }
 }
 
-.cc {
+.cc, .again, .tutorial {
     width: 89%;
     margin: 5%;
     position: absolute;
     display: inline-block;
-    @include perspective(500);
+    @include perspective(900);
+
     @include perspective-origin(50% 50%);
-    @include transform(translateX(110%));
     //@include transition(.5s $ease-in-out-quad all);
+    @include transform-style(preserve-3d);
+    @include transform(translate3d(0,0,0));
 
     &.active {
         @include transform(translateX(0));
+    }
+}
+
+.again {
+    z-index: 0;
+    @include transform(translateZ(-160px));
+    width: 60%;
+    margin: 20%;
+    border: 1px solid white;
+    background: transparentize(darken($brand-primary, 20%), 0);
+    border-radius: 5px;
+    height: auto;
+
+    a.btn {
+        font-size: 1.6em;
+        display: block;
+        margin: 5px;
+        text-align: left;
+
+        span {
+            font-size: .7em;
+        }
     }
 }
 
@@ -33,15 +58,45 @@ $height: 250px;
     height: $height;
     @include transform-style(preserve-3d);
     @include transform-origin(50% 50%);
-    @include transition(.5s $ease-in-out-quad all);
+    @include transition(.4s $ease-in-out-quad all);
+    @include transform(translateZ(-150px) rotate(1deg));
 
     .content {
         padding: 25px 30px;
         font-size: 2em;
         height: $height;
-        background: transparentize(darken($brand-primary, 20%), .4);
+        background: transparentize(darken($brand-primary, 20%), 0);
         @include backface-visibility(hidden);
         border-left: 6px solid white;
+        @include transform(rotateX(.1deg));
+
+        .number {
+            display: inline-block;
+            position: absolute;
+            top: 6px;
+            right: 8px;
+            font-size: .6em;
+            opacity: .2;
+            @include backface-visibility(hidden);
+        }
+
+        .good, .bad {
+            @include backface-visibility(hidden);
+            font-size: 1.5em;
+            position: absolute;
+            display: block;
+            top: 75%;
+        }
+
+        .good {
+            color: transparentize($brand-success, 0);
+            left: 32%;
+        }
+
+        .bad {
+            color: transparentize($brand-danger, 0);
+            left: 58%;
+        }
 
         &.de {
             z-index: 2;
@@ -49,9 +104,49 @@ $height: 250px;
 
         &.en {
             @include transform(translateY(-$height) rotateX(180deg));
-            background: transparentize(white, .4);
+            background: transparentize(white, 0);
             border-left-color: darken($brand-primary, 20%);
             color: $brand-primary;
         }
+    }
+}
+
+body.en-de {
+    .card {
+        .content.de {
+            z-index: 1;
+            @include transform(translateY(0px) rotateX(180deg));
+        }
+
+        .content.en {
+            z-index: 2;
+            @include transform(translateY(-$height) rotateX(0deg));
+        }
+    }
+}
+
+.cc:last-child {
+    .card {
+        @include transform(translateZ(0px));
+        opacity: 1;
+    }
+}
+
+span.bravo {
+    display: none;
+    padding-top: 11px;
+    padding-bottom: 1px;
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+body.bravo {
+    span.bravo {
+        display: block;
+    }
+
+    .again a.btn.notknown {
+        display: none;
     }
 }

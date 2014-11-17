@@ -9,6 +9,1969 @@ App: Blueprint, Author: Marcel Hadorn (@marc3llo)
 App: Blueprint, Author: Marcel Hadorn (@marc3llo)
 #################################################
 */
+/*!
+ *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.2.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+/* line 1, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/core */
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* makes the font 33% larger relative to the icon container */
+/* line 5, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/larger */
+.fa-lg {
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  vertical-align: -15%; }
+
+/* line 10, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/larger */
+.fa-2x {
+  font-size: 2em; }
+
+/* line 11, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/larger */
+.fa-3x {
+  font-size: 3em; }
+
+/* line 12, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/larger */
+.fa-4x {
+  font-size: 4em; }
+
+/* line 13, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/larger */
+.fa-5x {
+  font-size: 5em; }
+
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+/* line 4, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-glass:before {
+  content: "\f000"; }
+
+/* line 5, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-music:before {
+  content: "\f001"; }
+
+/* line 6, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-search:before {
+  content: "\f002"; }
+
+/* line 7, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-envelope-o:before {
+  content: "\f003"; }
+
+/* line 8, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-heart:before {
+  content: "\f004"; }
+
+/* line 9, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-star:before {
+  content: "\f005"; }
+
+/* line 10, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-star-o:before {
+  content: "\f006"; }
+
+/* line 11, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-user:before {
+  content: "\f007"; }
+
+/* line 12, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-film:before {
+  content: "\f008"; }
+
+/* line 13, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-th-large:before {
+  content: "\f009"; }
+
+/* line 14, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-th:before {
+  content: "\f00a"; }
+
+/* line 15, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-th-list:before {
+  content: "\f00b"; }
+
+/* line 16, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-check:before {
+  content: "\f00c"; }
+
+/* line 17, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-remove:before, .fa-close:before, .fa-times:before {
+  content: "\f00d"; }
+
+/* line 18, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-search-plus:before {
+  content: "\f00e"; }
+
+/* line 19, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-search-minus:before {
+  content: "\f010"; }
+
+/* line 20, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-power-off:before {
+  content: "\f011"; }
+
+/* line 21, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-signal:before {
+  content: "\f012"; }
+
+/* line 22, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-gear:before, .fa-cog:before {
+  content: "\f013"; }
+
+/* line 23, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-trash-o:before {
+  content: "\f014"; }
+
+/* line 24, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-home:before {
+  content: "\f015"; }
+
+/* line 25, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-file-o:before {
+  content: "\f016"; }
+
+/* line 26, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-clock-o:before {
+  content: "\f017"; }
+
+/* line 27, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-road:before {
+  content: "\f018"; }
+
+/* line 28, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-download:before {
+  content: "\f019"; }
+
+/* line 29, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-arrow-circle-o-down:before {
+  content: "\f01a"; }
+
+/* line 30, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-arrow-circle-o-up:before {
+  content: "\f01b"; }
+
+/* line 31, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-inbox:before {
+  content: "\f01c"; }
+
+/* line 32, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-play-circle-o:before {
+  content: "\f01d"; }
+
+/* line 33, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-rotate-right:before, .fa-repeat:before {
+  content: "\f01e"; }
+
+/* line 34, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-refresh:before {
+  content: "\f021"; }
+
+/* line 35, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-list-alt:before {
+  content: "\f022"; }
+
+/* line 36, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-lock:before {
+  content: "\f023"; }
+
+/* line 37, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-flag:before {
+  content: "\f024"; }
+
+/* line 38, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-headphones:before {
+  content: "\f025"; }
+
+/* line 39, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-volume-off:before {
+  content: "\f026"; }
+
+/* line 40, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-volume-down:before {
+  content: "\f027"; }
+
+/* line 41, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-volume-up:before {
+  content: "\f028"; }
+
+/* line 42, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-qrcode:before {
+  content: "\f029"; }
+
+/* line 43, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-barcode:before {
+  content: "\f02a"; }
+
+/* line 44, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-tag:before {
+  content: "\f02b"; }
+
+/* line 45, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-tags:before {
+  content: "\f02c"; }
+
+/* line 46, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-book:before {
+  content: "\f02d"; }
+
+/* line 47, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-bookmark:before {
+  content: "\f02e"; }
+
+/* line 48, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-print:before {
+  content: "\f02f"; }
+
+/* line 49, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-camera:before {
+  content: "\f030"; }
+
+/* line 50, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-font:before {
+  content: "\f031"; }
+
+/* line 51, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-bold:before {
+  content: "\f032"; }
+
+/* line 52, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-italic:before {
+  content: "\f033"; }
+
+/* line 53, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-text-height:before {
+  content: "\f034"; }
+
+/* line 54, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-text-width:before {
+  content: "\f035"; }
+
+/* line 55, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-align-left:before {
+  content: "\f036"; }
+
+/* line 56, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-align-center:before {
+  content: "\f037"; }
+
+/* line 57, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-align-right:before {
+  content: "\f038"; }
+
+/* line 58, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-align-justify:before {
+  content: "\f039"; }
+
+/* line 59, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-list:before {
+  content: "\f03a"; }
+
+/* line 60, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-dedent:before, .fa-outdent:before {
+  content: "\f03b"; }
+
+/* line 61, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-indent:before {
+  content: "\f03c"; }
+
+/* line 62, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-video-camera:before {
+  content: "\f03d"; }
+
+/* line 63, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-photo:before, .fa-image:before, .fa-picture-o:before {
+  content: "\f03e"; }
+
+/* line 64, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-pencil:before {
+  content: "\f040"; }
+
+/* line 65, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-map-marker:before {
+  content: "\f041"; }
+
+/* line 66, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-adjust:before {
+  content: "\f042"; }
+
+/* line 67, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-tint:before {
+  content: "\f043"; }
+
+/* line 68, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-edit:before, .fa-pencil-square-o:before {
+  content: "\f044"; }
+
+/* line 69, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-share-square-o:before {
+  content: "\f045"; }
+
+/* line 70, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-check-square-o:before {
+  content: "\f046"; }
+
+/* line 71, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-arrows:before {
+  content: "\f047"; }
+
+/* line 72, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-step-backward:before {
+  content: "\f048"; }
+
+/* line 73, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-fast-backward:before {
+  content: "\f049"; }
+
+/* line 74, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-backward:before {
+  content: "\f04a"; }
+
+/* line 75, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-play:before {
+  content: "\f04b"; }
+
+/* line 76, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-pause:before {
+  content: "\f04c"; }
+
+/* line 77, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-stop:before {
+  content: "\f04d"; }
+
+/* line 78, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-forward:before {
+  content: "\f04e"; }
+
+/* line 79, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-fast-forward:before {
+  content: "\f050"; }
+
+/* line 80, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-step-forward:before {
+  content: "\f051"; }
+
+/* line 81, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-eject:before {
+  content: "\f052"; }
+
+/* line 82, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-chevron-left:before {
+  content: "\f053"; }
+
+/* line 83, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-chevron-right:before {
+  content: "\f054"; }
+
+/* line 84, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-plus-circle:before {
+  content: "\f055"; }
+
+/* line 85, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-minus-circle:before {
+  content: "\f056"; }
+
+/* line 86, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-times-circle:before {
+  content: "\f057"; }
+
+/* line 87, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-check-circle:before {
+  content: "\f058"; }
+
+/* line 88, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-question-circle:before {
+  content: "\f059"; }
+
+/* line 89, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-info-circle:before {
+  content: "\f05a"; }
+
+/* line 90, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-crosshairs:before {
+  content: "\f05b"; }
+
+/* line 91, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-times-circle-o:before {
+  content: "\f05c"; }
+
+/* line 92, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-check-circle-o:before {
+  content: "\f05d"; }
+
+/* line 93, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-ban:before {
+  content: "\f05e"; }
+
+/* line 94, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-arrow-left:before {
+  content: "\f060"; }
+
+/* line 95, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-arrow-right:before {
+  content: "\f061"; }
+
+/* line 96, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-arrow-up:before {
+  content: "\f062"; }
+
+/* line 97, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-arrow-down:before {
+  content: "\f063"; }
+
+/* line 98, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-mail-forward:before, .fa-share:before {
+  content: "\f064"; }
+
+/* line 99, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-expand:before {
+  content: "\f065"; }
+
+/* line 100, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-compress:before {
+  content: "\f066"; }
+
+/* line 101, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-plus:before {
+  content: "\f067"; }
+
+/* line 102, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-minus:before {
+  content: "\f068"; }
+
+/* line 103, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-asterisk:before {
+  content: "\f069"; }
+
+/* line 104, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-exclamation-circle:before {
+  content: "\f06a"; }
+
+/* line 105, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-gift:before {
+  content: "\f06b"; }
+
+/* line 106, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-leaf:before {
+  content: "\f06c"; }
+
+/* line 107, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-fire:before {
+  content: "\f06d"; }
+
+/* line 108, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-eye:before {
+  content: "\f06e"; }
+
+/* line 109, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-eye-slash:before {
+  content: "\f070"; }
+
+/* line 110, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-warning:before, .fa-exclamation-triangle:before {
+  content: "\f071"; }
+
+/* line 111, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-plane:before {
+  content: "\f072"; }
+
+/* line 112, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-calendar:before {
+  content: "\f073"; }
+
+/* line 113, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-random:before {
+  content: "\f074"; }
+
+/* line 114, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-comment:before {
+  content: "\f075"; }
+
+/* line 115, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-magnet:before {
+  content: "\f076"; }
+
+/* line 116, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-chevron-up:before {
+  content: "\f077"; }
+
+/* line 117, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-chevron-down:before {
+  content: "\f078"; }
+
+/* line 118, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-retweet:before {
+  content: "\f079"; }
+
+/* line 119, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-shopping-cart:before {
+  content: "\f07a"; }
+
+/* line 120, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-folder:before {
+  content: "\f07b"; }
+
+/* line 121, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-folder-open:before {
+  content: "\f07c"; }
+
+/* line 122, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-arrows-v:before {
+  content: "\f07d"; }
+
+/* line 123, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-arrows-h:before {
+  content: "\f07e"; }
+
+/* line 124, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-bar-chart-o:before, .fa-bar-chart:before {
+  content: "\f080"; }
+
+/* line 125, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-twitter-square:before {
+  content: "\f081"; }
+
+/* line 126, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-facebook-square:before {
+  content: "\f082"; }
+
+/* line 127, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-camera-retro:before {
+  content: "\f083"; }
+
+/* line 128, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-key:before {
+  content: "\f084"; }
+
+/* line 129, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-gears:before, .fa-cogs:before {
+  content: "\f085"; }
+
+/* line 130, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-comments:before {
+  content: "\f086"; }
+
+/* line 131, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-thumbs-o-up:before {
+  content: "\f087"; }
+
+/* line 132, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-thumbs-o-down:before {
+  content: "\f088"; }
+
+/* line 133, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-star-half:before {
+  content: "\f089"; }
+
+/* line 134, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-heart-o:before {
+  content: "\f08a"; }
+
+/* line 135, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-sign-out:before {
+  content: "\f08b"; }
+
+/* line 136, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-linkedin-square:before {
+  content: "\f08c"; }
+
+/* line 137, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-thumb-tack:before {
+  content: "\f08d"; }
+
+/* line 138, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-external-link:before {
+  content: "\f08e"; }
+
+/* line 139, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-sign-in:before {
+  content: "\f090"; }
+
+/* line 140, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-trophy:before {
+  content: "\f091"; }
+
+/* line 141, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-github-square:before {
+  content: "\f092"; }
+
+/* line 142, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-upload:before {
+  content: "\f093"; }
+
+/* line 143, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-lemon-o:before {
+  content: "\f094"; }
+
+/* line 144, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-phone:before {
+  content: "\f095"; }
+
+/* line 145, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-square-o:before {
+  content: "\f096"; }
+
+/* line 146, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-bookmark-o:before {
+  content: "\f097"; }
+
+/* line 147, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-phone-square:before {
+  content: "\f098"; }
+
+/* line 148, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-twitter:before {
+  content: "\f099"; }
+
+/* line 149, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-facebook:before {
+  content: "\f09a"; }
+
+/* line 150, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-github:before {
+  content: "\f09b"; }
+
+/* line 151, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-unlock:before {
+  content: "\f09c"; }
+
+/* line 152, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-credit-card:before {
+  content: "\f09d"; }
+
+/* line 153, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-rss:before {
+  content: "\f09e"; }
+
+/* line 154, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-hdd-o:before {
+  content: "\f0a0"; }
+
+/* line 155, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-bullhorn:before {
+  content: "\f0a1"; }
+
+/* line 156, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-bell:before {
+  content: "\f0f3"; }
+
+/* line 157, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-certificate:before {
+  content: "\f0a3"; }
+
+/* line 158, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-hand-o-right:before {
+  content: "\f0a4"; }
+
+/* line 159, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-hand-o-left:before {
+  content: "\f0a5"; }
+
+/* line 160, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-hand-o-up:before {
+  content: "\f0a6"; }
+
+/* line 161, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-hand-o-down:before {
+  content: "\f0a7"; }
+
+/* line 162, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-arrow-circle-left:before {
+  content: "\f0a8"; }
+
+/* line 163, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-arrow-circle-right:before {
+  content: "\f0a9"; }
+
+/* line 164, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-arrow-circle-up:before {
+  content: "\f0aa"; }
+
+/* line 165, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-arrow-circle-down:before {
+  content: "\f0ab"; }
+
+/* line 166, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-globe:before {
+  content: "\f0ac"; }
+
+/* line 167, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-wrench:before {
+  content: "\f0ad"; }
+
+/* line 168, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-tasks:before {
+  content: "\f0ae"; }
+
+/* line 169, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-filter:before {
+  content: "\f0b0"; }
+
+/* line 170, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-briefcase:before {
+  content: "\f0b1"; }
+
+/* line 171, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-arrows-alt:before {
+  content: "\f0b2"; }
+
+/* line 172, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-group:before, .fa-users:before {
+  content: "\f0c0"; }
+
+/* line 173, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-chain:before, .fa-link:before {
+  content: "\f0c1"; }
+
+/* line 174, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-cloud:before {
+  content: "\f0c2"; }
+
+/* line 175, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-flask:before {
+  content: "\f0c3"; }
+
+/* line 176, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-cut:before, .fa-scissors:before {
+  content: "\f0c4"; }
+
+/* line 177, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-copy:before, .fa-files-o:before {
+  content: "\f0c5"; }
+
+/* line 178, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-paperclip:before {
+  content: "\f0c6"; }
+
+/* line 179, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-save:before, .fa-floppy-o:before {
+  content: "\f0c7"; }
+
+/* line 180, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-square:before {
+  content: "\f0c8"; }
+
+/* line 181, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-navicon:before, .fa-reorder:before, .fa-bars:before {
+  content: "\f0c9"; }
+
+/* line 182, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-list-ul:before {
+  content: "\f0ca"; }
+
+/* line 183, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-list-ol:before {
+  content: "\f0cb"; }
+
+/* line 184, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-strikethrough:before {
+  content: "\f0cc"; }
+
+/* line 185, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-underline:before {
+  content: "\f0cd"; }
+
+/* line 186, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-table:before {
+  content: "\f0ce"; }
+
+/* line 187, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-magic:before {
+  content: "\f0d0"; }
+
+/* line 188, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-truck:before {
+  content: "\f0d1"; }
+
+/* line 189, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-pinterest:before {
+  content: "\f0d2"; }
+
+/* line 190, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-pinterest-square:before {
+  content: "\f0d3"; }
+
+/* line 191, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-google-plus-square:before {
+  content: "\f0d4"; }
+
+/* line 192, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-google-plus:before {
+  content: "\f0d5"; }
+
+/* line 193, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-money:before {
+  content: "\f0d6"; }
+
+/* line 194, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-caret-down:before {
+  content: "\f0d7"; }
+
+/* line 195, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-caret-up:before {
+  content: "\f0d8"; }
+
+/* line 196, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-caret-left:before {
+  content: "\f0d9"; }
+
+/* line 197, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-caret-right:before {
+  content: "\f0da"; }
+
+/* line 198, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-columns:before {
+  content: "\f0db"; }
+
+/* line 199, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-unsorted:before, .fa-sort:before {
+  content: "\f0dc"; }
+
+/* line 200, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-sort-down:before, .fa-sort-desc:before {
+  content: "\f0dd"; }
+
+/* line 201, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-sort-up:before, .fa-sort-asc:before {
+  content: "\f0de"; }
+
+/* line 202, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-envelope:before {
+  content: "\f0e0"; }
+
+/* line 203, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-linkedin:before {
+  content: "\f0e1"; }
+
+/* line 204, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-rotate-left:before, .fa-undo:before {
+  content: "\f0e2"; }
+
+/* line 205, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-legal:before, .fa-gavel:before {
+  content: "\f0e3"; }
+
+/* line 206, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-dashboard:before, .fa-tachometer:before {
+  content: "\f0e4"; }
+
+/* line 207, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-comment-o:before {
+  content: "\f0e5"; }
+
+/* line 208, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-comments-o:before {
+  content: "\f0e6"; }
+
+/* line 209, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-flash:before, .fa-bolt:before {
+  content: "\f0e7"; }
+
+/* line 210, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-sitemap:before {
+  content: "\f0e8"; }
+
+/* line 211, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-umbrella:before {
+  content: "\f0e9"; }
+
+/* line 212, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-paste:before, .fa-clipboard:before {
+  content: "\f0ea"; }
+
+/* line 213, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-lightbulb-o:before {
+  content: "\f0eb"; }
+
+/* line 214, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-exchange:before {
+  content: "\f0ec"; }
+
+/* line 215, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-cloud-download:before {
+  content: "\f0ed"; }
+
+/* line 216, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-cloud-upload:before {
+  content: "\f0ee"; }
+
+/* line 217, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-user-md:before {
+  content: "\f0f0"; }
+
+/* line 218, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-stethoscope:before {
+  content: "\f0f1"; }
+
+/* line 219, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-suitcase:before {
+  content: "\f0f2"; }
+
+/* line 220, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-bell-o:before {
+  content: "\f0a2"; }
+
+/* line 221, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-coffee:before {
+  content: "\f0f4"; }
+
+/* line 222, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-cutlery:before {
+  content: "\f0f5"; }
+
+/* line 223, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-file-text-o:before {
+  content: "\f0f6"; }
+
+/* line 224, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-building-o:before {
+  content: "\f0f7"; }
+
+/* line 225, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-hospital-o:before {
+  content: "\f0f8"; }
+
+/* line 226, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-ambulance:before {
+  content: "\f0f9"; }
+
+/* line 227, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-medkit:before {
+  content: "\f0fa"; }
+
+/* line 228, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-fighter-jet:before {
+  content: "\f0fb"; }
+
+/* line 229, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-beer:before {
+  content: "\f0fc"; }
+
+/* line 230, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-h-square:before {
+  content: "\f0fd"; }
+
+/* line 231, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-plus-square:before {
+  content: "\f0fe"; }
+
+/* line 232, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-angle-double-left:before {
+  content: "\f100"; }
+
+/* line 233, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-angle-double-right:before {
+  content: "\f101"; }
+
+/* line 234, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-angle-double-up:before {
+  content: "\f102"; }
+
+/* line 235, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-angle-double-down:before {
+  content: "\f103"; }
+
+/* line 236, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-angle-left:before {
+  content: "\f104"; }
+
+/* line 237, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-angle-right:before {
+  content: "\f105"; }
+
+/* line 238, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-angle-up:before {
+  content: "\f106"; }
+
+/* line 239, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-angle-down:before {
+  content: "\f107"; }
+
+/* line 240, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-desktop:before {
+  content: "\f108"; }
+
+/* line 241, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-laptop:before {
+  content: "\f109"; }
+
+/* line 242, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-tablet:before {
+  content: "\f10a"; }
+
+/* line 243, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-mobile-phone:before, .fa-mobile:before {
+  content: "\f10b"; }
+
+/* line 244, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-circle-o:before {
+  content: "\f10c"; }
+
+/* line 245, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-quote-left:before {
+  content: "\f10d"; }
+
+/* line 246, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-quote-right:before {
+  content: "\f10e"; }
+
+/* line 247, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-spinner:before {
+  content: "\f110"; }
+
+/* line 248, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-circle:before {
+  content: "\f111"; }
+
+/* line 249, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-mail-reply:before, .fa-reply:before {
+  content: "\f112"; }
+
+/* line 250, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-github-alt:before {
+  content: "\f113"; }
+
+/* line 251, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-folder-o:before {
+  content: "\f114"; }
+
+/* line 252, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-folder-open-o:before {
+  content: "\f115"; }
+
+/* line 253, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-smile-o:before {
+  content: "\f118"; }
+
+/* line 254, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-frown-o:before {
+  content: "\f119"; }
+
+/* line 255, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-meh-o:before {
+  content: "\f11a"; }
+
+/* line 256, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-gamepad:before {
+  content: "\f11b"; }
+
+/* line 257, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-keyboard-o:before {
+  content: "\f11c"; }
+
+/* line 258, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-flag-o:before {
+  content: "\f11d"; }
+
+/* line 259, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-flag-checkered:before {
+  content: "\f11e"; }
+
+/* line 260, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-terminal:before {
+  content: "\f120"; }
+
+/* line 261, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-code:before {
+  content: "\f121"; }
+
+/* line 262, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-mail-reply-all:before, .fa-reply-all:before {
+  content: "\f122"; }
+
+/* line 263, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-star-half-empty:before, .fa-star-half-full:before, .fa-star-half-o:before {
+  content: "\f123"; }
+
+/* line 264, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-location-arrow:before {
+  content: "\f124"; }
+
+/* line 265, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-crop:before {
+  content: "\f125"; }
+
+/* line 266, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-code-fork:before {
+  content: "\f126"; }
+
+/* line 267, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-unlink:before, .fa-chain-broken:before {
+  content: "\f127"; }
+
+/* line 268, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-question:before {
+  content: "\f128"; }
+
+/* line 269, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-info:before {
+  content: "\f129"; }
+
+/* line 270, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-exclamation:before {
+  content: "\f12a"; }
+
+/* line 271, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-superscript:before {
+  content: "\f12b"; }
+
+/* line 272, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-subscript:before {
+  content: "\f12c"; }
+
+/* line 273, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-eraser:before {
+  content: "\f12d"; }
+
+/* line 274, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-puzzle-piece:before {
+  content: "\f12e"; }
+
+/* line 275, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-microphone:before {
+  content: "\f130"; }
+
+/* line 276, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-microphone-slash:before {
+  content: "\f131"; }
+
+/* line 277, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-shield:before {
+  content: "\f132"; }
+
+/* line 278, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-calendar-o:before {
+  content: "\f133"; }
+
+/* line 279, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-fire-extinguisher:before {
+  content: "\f134"; }
+
+/* line 280, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-rocket:before {
+  content: "\f135"; }
+
+/* line 281, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-maxcdn:before {
+  content: "\f136"; }
+
+/* line 282, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-chevron-circle-left:before {
+  content: "\f137"; }
+
+/* line 283, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-chevron-circle-right:before {
+  content: "\f138"; }
+
+/* line 284, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-chevron-circle-up:before {
+  content: "\f139"; }
+
+/* line 285, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-chevron-circle-down:before {
+  content: "\f13a"; }
+
+/* line 286, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-html5:before {
+  content: "\f13b"; }
+
+/* line 287, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-css3:before {
+  content: "\f13c"; }
+
+/* line 288, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-anchor:before {
+  content: "\f13d"; }
+
+/* line 289, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-unlock-alt:before {
+  content: "\f13e"; }
+
+/* line 290, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-bullseye:before {
+  content: "\f140"; }
+
+/* line 291, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-ellipsis-h:before {
+  content: "\f141"; }
+
+/* line 292, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-ellipsis-v:before {
+  content: "\f142"; }
+
+/* line 293, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-rss-square:before {
+  content: "\f143"; }
+
+/* line 294, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-play-circle:before {
+  content: "\f144"; }
+
+/* line 295, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-ticket:before {
+  content: "\f145"; }
+
+/* line 296, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-minus-square:before {
+  content: "\f146"; }
+
+/* line 297, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-minus-square-o:before {
+  content: "\f147"; }
+
+/* line 298, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-level-up:before {
+  content: "\f148"; }
+
+/* line 299, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-level-down:before {
+  content: "\f149"; }
+
+/* line 300, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-check-square:before {
+  content: "\f14a"; }
+
+/* line 301, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-pencil-square:before {
+  content: "\f14b"; }
+
+/* line 302, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-external-link-square:before {
+  content: "\f14c"; }
+
+/* line 303, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-share-square:before {
+  content: "\f14d"; }
+
+/* line 304, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-compass:before {
+  content: "\f14e"; }
+
+/* line 305, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-toggle-down:before, .fa-caret-square-o-down:before {
+  content: "\f150"; }
+
+/* line 306, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-toggle-up:before, .fa-caret-square-o-up:before {
+  content: "\f151"; }
+
+/* line 307, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-toggle-right:before, .fa-caret-square-o-right:before {
+  content: "\f152"; }
+
+/* line 308, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-euro:before, .fa-eur:before {
+  content: "\f153"; }
+
+/* line 309, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-gbp:before {
+  content: "\f154"; }
+
+/* line 310, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-dollar:before, .fa-usd:before {
+  content: "\f155"; }
+
+/* line 311, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-rupee:before, .fa-inr:before {
+  content: "\f156"; }
+
+/* line 312, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-cny:before, .fa-rmb:before, .fa-yen:before, .fa-jpy:before {
+  content: "\f157"; }
+
+/* line 313, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-ruble:before, .fa-rouble:before, .fa-rub:before {
+  content: "\f158"; }
+
+/* line 314, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-won:before, .fa-krw:before {
+  content: "\f159"; }
+
+/* line 315, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-bitcoin:before, .fa-btc:before {
+  content: "\f15a"; }
+
+/* line 316, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-file:before {
+  content: "\f15b"; }
+
+/* line 317, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-file-text:before {
+  content: "\f15c"; }
+
+/* line 318, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-sort-alpha-asc:before {
+  content: "\f15d"; }
+
+/* line 319, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-sort-alpha-desc:before {
+  content: "\f15e"; }
+
+/* line 320, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-sort-amount-asc:before {
+  content: "\f160"; }
+
+/* line 321, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-sort-amount-desc:before {
+  content: "\f161"; }
+
+/* line 322, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-sort-numeric-asc:before {
+  content: "\f162"; }
+
+/* line 323, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-sort-numeric-desc:before {
+  content: "\f163"; }
+
+/* line 324, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-thumbs-up:before {
+  content: "\f164"; }
+
+/* line 325, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-thumbs-down:before {
+  content: "\f165"; }
+
+/* line 326, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-youtube-square:before {
+  content: "\f166"; }
+
+/* line 327, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-youtube:before {
+  content: "\f167"; }
+
+/* line 328, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-xing:before {
+  content: "\f168"; }
+
+/* line 329, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-xing-square:before {
+  content: "\f169"; }
+
+/* line 330, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-youtube-play:before {
+  content: "\f16a"; }
+
+/* line 331, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-dropbox:before {
+  content: "\f16b"; }
+
+/* line 332, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-stack-overflow:before {
+  content: "\f16c"; }
+
+/* line 333, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-instagram:before {
+  content: "\f16d"; }
+
+/* line 334, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-flickr:before {
+  content: "\f16e"; }
+
+/* line 335, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-adn:before {
+  content: "\f170"; }
+
+/* line 336, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-bitbucket:before {
+  content: "\f171"; }
+
+/* line 337, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-bitbucket-square:before {
+  content: "\f172"; }
+
+/* line 338, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-tumblr:before {
+  content: "\f173"; }
+
+/* line 339, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-tumblr-square:before {
+  content: "\f174"; }
+
+/* line 340, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-long-arrow-down:before {
+  content: "\f175"; }
+
+/* line 341, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-long-arrow-up:before {
+  content: "\f176"; }
+
+/* line 342, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-long-arrow-left:before {
+  content: "\f177"; }
+
+/* line 343, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-long-arrow-right:before {
+  content: "\f178"; }
+
+/* line 344, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-apple:before {
+  content: "\f179"; }
+
+/* line 345, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-windows:before {
+  content: "\f17a"; }
+
+/* line 346, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-android:before {
+  content: "\f17b"; }
+
+/* line 347, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-linux:before {
+  content: "\f17c"; }
+
+/* line 348, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-dribbble:before {
+  content: "\f17d"; }
+
+/* line 349, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-skype:before {
+  content: "\f17e"; }
+
+/* line 350, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-foursquare:before {
+  content: "\f180"; }
+
+/* line 351, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-trello:before {
+  content: "\f181"; }
+
+/* line 352, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-female:before {
+  content: "\f182"; }
+
+/* line 353, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-male:before {
+  content: "\f183"; }
+
+/* line 354, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-gittip:before {
+  content: "\f184"; }
+
+/* line 355, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-sun-o:before {
+  content: "\f185"; }
+
+/* line 356, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-moon-o:before {
+  content: "\f186"; }
+
+/* line 357, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-archive:before {
+  content: "\f187"; }
+
+/* line 358, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-bug:before {
+  content: "\f188"; }
+
+/* line 359, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-vk:before {
+  content: "\f189"; }
+
+/* line 360, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-weibo:before {
+  content: "\f18a"; }
+
+/* line 361, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-renren:before {
+  content: "\f18b"; }
+
+/* line 362, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-pagelines:before {
+  content: "\f18c"; }
+
+/* line 363, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-stack-exchange:before {
+  content: "\f18d"; }
+
+/* line 364, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-arrow-circle-o-right:before {
+  content: "\f18e"; }
+
+/* line 365, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-arrow-circle-o-left:before {
+  content: "\f190"; }
+
+/* line 366, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-toggle-left:before, .fa-caret-square-o-left:before {
+  content: "\f191"; }
+
+/* line 367, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-dot-circle-o:before {
+  content: "\f192"; }
+
+/* line 368, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-wheelchair:before {
+  content: "\f193"; }
+
+/* line 369, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-vimeo-square:before {
+  content: "\f194"; }
+
+/* line 370, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-turkish-lira:before, .fa-try:before {
+  content: "\f195"; }
+
+/* line 371, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-plus-square-o:before {
+  content: "\f196"; }
+
+/* line 372, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-space-shuttle:before {
+  content: "\f197"; }
+
+/* line 373, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-slack:before {
+  content: "\f198"; }
+
+/* line 374, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-envelope-square:before {
+  content: "\f199"; }
+
+/* line 375, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-wordpress:before {
+  content: "\f19a"; }
+
+/* line 376, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-openid:before {
+  content: "\f19b"; }
+
+/* line 377, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-institution:before, .fa-bank:before, .fa-university:before {
+  content: "\f19c"; }
+
+/* line 378, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-mortar-board:before, .fa-graduation-cap:before {
+  content: "\f19d"; }
+
+/* line 379, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-yahoo:before {
+  content: "\f19e"; }
+
+/* line 380, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-google:before {
+  content: "\f1a0"; }
+
+/* line 381, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-reddit:before {
+  content: "\f1a1"; }
+
+/* line 382, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-reddit-square:before {
+  content: "\f1a2"; }
+
+/* line 383, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-stumbleupon-circle:before {
+  content: "\f1a3"; }
+
+/* line 384, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-stumbleupon:before {
+  content: "\f1a4"; }
+
+/* line 385, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-delicious:before {
+  content: "\f1a5"; }
+
+/* line 386, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-digg:before {
+  content: "\f1a6"; }
+
+/* line 387, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-pied-piper:before {
+  content: "\f1a7"; }
+
+/* line 388, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-pied-piper-alt:before {
+  content: "\f1a8"; }
+
+/* line 389, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-drupal:before {
+  content: "\f1a9"; }
+
+/* line 390, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-joomla:before {
+  content: "\f1aa"; }
+
+/* line 391, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-language:before {
+  content: "\f1ab"; }
+
+/* line 392, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-fax:before {
+  content: "\f1ac"; }
+
+/* line 393, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-building:before {
+  content: "\f1ad"; }
+
+/* line 394, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-child:before {
+  content: "\f1ae"; }
+
+/* line 395, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-paw:before {
+  content: "\f1b0"; }
+
+/* line 396, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-spoon:before {
+  content: "\f1b1"; }
+
+/* line 397, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-cube:before {
+  content: "\f1b2"; }
+
+/* line 398, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-cubes:before {
+  content: "\f1b3"; }
+
+/* line 399, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-behance:before {
+  content: "\f1b4"; }
+
+/* line 400, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-behance-square:before {
+  content: "\f1b5"; }
+
+/* line 401, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-steam:before {
+  content: "\f1b6"; }
+
+/* line 402, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-steam-square:before {
+  content: "\f1b7"; }
+
+/* line 403, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-recycle:before {
+  content: "\f1b8"; }
+
+/* line 404, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-automobile:before, .fa-car:before {
+  content: "\f1b9"; }
+
+/* line 405, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-cab:before, .fa-taxi:before {
+  content: "\f1ba"; }
+
+/* line 406, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-tree:before {
+  content: "\f1bb"; }
+
+/* line 407, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-spotify:before {
+  content: "\f1bc"; }
+
+/* line 408, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-deviantart:before {
+  content: "\f1bd"; }
+
+/* line 409, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-soundcloud:before {
+  content: "\f1be"; }
+
+/* line 410, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-database:before {
+  content: "\f1c0"; }
+
+/* line 411, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-file-pdf-o:before {
+  content: "\f1c1"; }
+
+/* line 412, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-file-word-o:before {
+  content: "\f1c2"; }
+
+/* line 413, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-file-excel-o:before {
+  content: "\f1c3"; }
+
+/* line 414, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-file-powerpoint-o:before {
+  content: "\f1c4"; }
+
+/* line 415, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-file-photo-o:before, .fa-file-picture-o:before, .fa-file-image-o:before {
+  content: "\f1c5"; }
+
+/* line 416, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-file-zip-o:before, .fa-file-archive-o:before {
+  content: "\f1c6"; }
+
+/* line 417, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-file-sound-o:before, .fa-file-audio-o:before {
+  content: "\f1c7"; }
+
+/* line 418, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-file-movie-o:before, .fa-file-video-o:before {
+  content: "\f1c8"; }
+
+/* line 419, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-file-code-o:before {
+  content: "\f1c9"; }
+
+/* line 420, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-vine:before {
+  content: "\f1ca"; }
+
+/* line 421, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-codepen:before {
+  content: "\f1cb"; }
+
+/* line 422, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-jsfiddle:before {
+  content: "\f1cc"; }
+
+/* line 423, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-life-bouy:before, .fa-life-buoy:before, .fa-life-saver:before, .fa-support:before, .fa-life-ring:before {
+  content: "\f1cd"; }
+
+/* line 424, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-circle-o-notch:before {
+  content: "\f1ce"; }
+
+/* line 425, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-ra:before, .fa-rebel:before {
+  content: "\f1d0"; }
+
+/* line 426, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-ge:before, .fa-empire:before {
+  content: "\f1d1"; }
+
+/* line 427, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-git-square:before {
+  content: "\f1d2"; }
+
+/* line 428, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-git:before {
+  content: "\f1d3"; }
+
+/* line 429, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-hacker-news:before {
+  content: "\f1d4"; }
+
+/* line 430, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-tencent-weibo:before {
+  content: "\f1d5"; }
+
+/* line 431, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-qq:before {
+  content: "\f1d6"; }
+
+/* line 432, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-wechat:before, .fa-weixin:before {
+  content: "\f1d7"; }
+
+/* line 433, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-send:before, .fa-paper-plane:before {
+  content: "\f1d8"; }
+
+/* line 434, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-send-o:before, .fa-paper-plane-o:before {
+  content: "\f1d9"; }
+
+/* line 435, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-history:before {
+  content: "\f1da"; }
+
+/* line 436, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-circle-thin:before {
+  content: "\f1db"; }
+
+/* line 437, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-header:before {
+  content: "\f1dc"; }
+
+/* line 438, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-paragraph:before {
+  content: "\f1dd"; }
+
+/* line 439, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-sliders:before {
+  content: "\f1de"; }
+
+/* line 440, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-share-alt:before {
+  content: "\f1e0"; }
+
+/* line 441, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-share-alt-square:before {
+  content: "\f1e1"; }
+
+/* line 442, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-bomb:before {
+  content: "\f1e2"; }
+
+/* line 443, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-soccer-ball-o:before, .fa-futbol-o:before {
+  content: "\f1e3"; }
+
+/* line 444, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-tty:before {
+  content: "\f1e4"; }
+
+/* line 445, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-binoculars:before {
+  content: "\f1e5"; }
+
+/* line 446, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-plug:before {
+  content: "\f1e6"; }
+
+/* line 447, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-slideshare:before {
+  content: "\f1e7"; }
+
+/* line 448, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-twitch:before {
+  content: "\f1e8"; }
+
+/* line 449, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-yelp:before {
+  content: "\f1e9"; }
+
+/* line 450, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-newspaper-o:before {
+  content: "\f1ea"; }
+
+/* line 451, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-wifi:before {
+  content: "\f1eb"; }
+
+/* line 452, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-calculator:before {
+  content: "\f1ec"; }
+
+/* line 453, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-paypal:before {
+  content: "\f1ed"; }
+
+/* line 454, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-google-wallet:before {
+  content: "\f1ee"; }
+
+/* line 455, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-cc-visa:before {
+  content: "\f1f0"; }
+
+/* line 456, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-cc-mastercard:before {
+  content: "\f1f1"; }
+
+/* line 457, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-cc-discover:before {
+  content: "\f1f2"; }
+
+/* line 458, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-cc-amex:before {
+  content: "\f1f3"; }
+
+/* line 459, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-cc-paypal:before {
+  content: "\f1f4"; }
+
+/* line 460, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-cc-stripe:before {
+  content: "\f1f5"; }
+
+/* line 461, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-bell-slash:before {
+  content: "\f1f6"; }
+
+/* line 462, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-bell-slash-o:before {
+  content: "\f1f7"; }
+
+/* line 463, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-trash:before {
+  content: "\f1f8"; }
+
+/* line 464, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-copyright:before {
+  content: "\f1f9"; }
+
+/* line 465, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-at:before {
+  content: "\f1fa"; }
+
+/* line 466, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-eyedropper:before {
+  content: "\f1fb"; }
+
+/* line 467, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-paint-brush:before {
+  content: "\f1fc"; }
+
+/* line 468, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-birthday-cake:before {
+  content: "\f1fd"; }
+
+/* line 469, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-area-chart:before {
+  content: "\f1fe"; }
+
+/* line 470, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-pie-chart:before {
+  content: "\f200"; }
+
+/* line 471, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-line-chart:before {
+  content: "\f201"; }
+
+/* line 472, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-lastfm:before {
+  content: "\f202"; }
+
+/* line 473, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-lastfm-square:before {
+  content: "\f203"; }
+
+/* line 474, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-toggle-off:before {
+  content: "\f204"; }
+
+/* line 475, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-toggle-on:before {
+  content: "\f205"; }
+
+/* line 476, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-bicycle:before {
+  content: "\f206"; }
+
+/* line 477, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-bus:before {
+  content: "\f207"; }
+
+/* line 478, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-ioxhost:before {
+  content: "\f208"; }
+
+/* line 479, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-angellist:before {
+  content: "\f209"; }
+
+/* line 480, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-cc:before {
+  content: "\f20a"; }
+
+/* line 481, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-shekel:before, .fa-sheqel:before, .fa-ils:before {
+  content: "\f20b"; }
+
+/* line 482, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/scss/icons */
+.fa-meanpath:before {
+  content: "\f20c"; }
+
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 /* line 9, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/bootstrap/bootstrap/normalize */
 html {
@@ -5960,14 +7923,7 @@ header {
 header h2 {
   line-height: 40px; }
 
-/* line 69, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/basic */
-footer {
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 19px;
-  border-top: 1px solid #e5e5e5; }
-
-/* line 76, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/basic */
+/* line 70, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/basic */
 #wrapper {
   height: 100%;
   min-height: 100%;
@@ -5980,31 +7936,74 @@ footer {
   -webkit-transform-style: preserve-3d;
   -webkit-transform: translate3d(0, 0, 0); }
 
-/* line 89, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/basic */
+/* line 83, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/basic */
 .footer {
   color: #777; }
 
-/* line 93, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/basic */
+/* line 87, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/basic */
 footer {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 19px;
   position: absolute;
-  bottom: 0; }
+  bottom: 0;
+  padding: 0;
+  background: rgba(33, 99, 157, 0.5);
+  width: 100%; }
+  /* line 97, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/basic */
+  footer a {
+    border-bottom: none !important;
+    font-size: 2.8rem;
+    width: 50%;
+    padding: 13px 0px 15px;
+    display: inline-block;
+    text-align: center;
+    background-color: rgba(29, 86, 136, 0.5);
+    -webkit-transition: 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) all;
+    -moz-transition: 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) all;
+    transition: 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) all;
+    display: block;
+    float: left; }
+    /* line 109, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/basic */
+    footer a.touch {
+      background-color: #184873; }
+    /* line 113, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/basic */
+    footer a.shuffle {
+      padding: 16px 0px 12px; }
+    /* line 118, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/basic */
+    footer a.direction i {
+      font-size: 0.9em;
+      font-weight: bold; }
+    /* line 123, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/basic */
+    footer a.direction.de {
+      display: none; }
+  @media screen and (orientation: landscape) {
+    footer {
+      display: none; } }
 
-/* line 98, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/basic */
+/* line 135, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/basic */
+body.en-de footer a.direction.en {
+  display: none; }
+/* line 139, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/basic */
+body.en-de footer a.direction.de {
+  display: block; }
+
+/* line 144, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/basic */
 .jumbotron {
   border: 1px solid white; }
 
-/* line 102, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/basic */
+/* line 148, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/basic */
 .teaser {
   border-bottom: 1px solid white; }
 
-/* line 106, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/basic */
+/* line 152, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/basic */
 .contact {
   margin: 0px auto 30px;
   padding: 10px 20px 20px;
   text-align: center;
   background-color: white;
   color: #2570a5; }
-  /* line 112, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/basic */
+  /* line 158, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/basic */
   .contact p {
     color: #2570a5;
     font-size: 1.2em; }
@@ -6526,38 +8525,68 @@ body.signedin #signoutform {
   min-width: 100;
   display: block;
   position: relative;
-  padding-top: 20%; }
+  padding-top: 20%;
+  height: 350px; }
   @media screen and (orientation: landscape) {
     #viewport {
       padding-top: 0%;
       margin-top: -10%; } }
 
-/* line 16, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/cards */
-.cc {
+/* line 17, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/cards */
+.cc, .again, .tutorial {
   width: 89%;
   margin: 5%;
   position: absolute;
   display: inline-block;
-  -webkit-perspective: 500;
-  -moz-perspective: 500;
-  perspective: 500;
+  -webkit-perspective: 900;
+  -moz-perspective: 900;
+  perspective: 900;
   -webkit-perspective-origin: 50% 50%;
   -moz-perspective-origin: 50% 50%;
   perspective-origin: 50% 50%;
-  -webkit-transform: translateX(110%);
-  -moz-transform: translateX(110%);
-  -ms-transform: translateX(110%);
-  -o-transform: translateX(110%);
-  transform: translateX(110%); }
-  /* line 26, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/cards */
-  .cc.active {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+  /* line 29, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/cards */
+  .cc.active, .again.active, .tutorial.active {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
     transform: translateX(0); }
 
-/* line 32, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/cards */
+/* line 34, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/cards */
+.again {
+  z-index: 0;
+  -webkit-transform: translateZ(-160px);
+  -moz-transform: translateZ(-160px);
+  -ms-transform: translateZ(-160px);
+  -o-transform: translateZ(-160px);
+  transform: translateZ(-160px);
+  width: 60%;
+  margin: 20%;
+  border: 1px solid white;
+  background: #0f2e49;
+  border-radius: 5px;
+  height: auto; }
+  /* line 44, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/cards */
+  .again a.btn {
+    font-size: 1.6em;
+    display: block;
+    margin: 5px;
+    text-align: left; }
+    /* line 50, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/cards */
+    .again a.btn span {
+      font-size: 0.7em; }
+
+/* line 57, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/cards */
 .card {
   height: 250px;
   -webkit-transform-style: preserve-3d;
@@ -6570,31 +8599,109 @@ body.signedin #signoutform {
   -ms-transform-origin: 50% 50%;
   -o-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
-  -webkit-transition: 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) all;
-  -moz-transition: 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) all;
-  transition: 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) all; }
-  /* line 38, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/cards */
+  -webkit-transition: 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) all;
+  -moz-transition: 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) all;
+  transition: 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) all;
+  -webkit-transform: translateZ(-150px) rotate(1deg);
+  -moz-transform: translateZ(-150px) rotate(1deg);
+  -ms-transform: translateZ(-150px) rotate(1deg);
+  -o-transform: translateZ(-150px) rotate(1deg);
+  transform: translateZ(-150px) rotate(1deg); }
+  /* line 64, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/cards */
   .card .content {
     padding: 25px 30px;
     font-size: 2em;
     height: 250px;
-    background: rgba(15, 46, 73, 0.6);
+    background: #0f2e49;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    border-left: 6px solid white; }
-    /* line 46, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/cards */
+    border-left: 6px solid white;
+    -webkit-transform: rotateX(0.1deg);
+    -moz-transform: rotateX(0.1deg);
+    -ms-transform: rotateX(0.1deg);
+    -o-transform: rotateX(0.1deg);
+    transform: rotateX(0.1deg); }
+    /* line 73, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/cards */
+    .card .content .number {
+      display: inline-block;
+      position: absolute;
+      top: 6px;
+      right: 8px;
+      font-size: 0.6em;
+      opacity: 0.2;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden; }
+    /* line 83, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/cards */
+    .card .content .good, .card .content .bad {
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      font-size: 1.5em;
+      position: absolute;
+      display: block;
+      top: 75%; }
+    /* line 91, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/cards */
+    .card .content .good {
+      color: #5cb85c;
+      left: 32%; }
+    /* line 96, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/cards */
+    .card .content .bad {
+      color: #e25e47;
+      left: 58%; }
+    /* line 101, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/cards */
     .card .content.de {
       z-index: 2; }
-    /* line 50, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/cards */
+    /* line 105, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/cards */
     .card .content.en {
       -webkit-transform: translateY(-250px) rotateX(180deg);
       -moz-transform: translateY(-250px) rotateX(180deg);
       -ms-transform: translateY(-250px) rotateX(180deg);
       -o-transform: translateY(-250px) rotateX(180deg);
       transform: translateY(-250px) rotateX(180deg);
-      background: rgba(255, 255, 255, 0.6);
+      background: white;
       border-left-color: #0f2e49;
       color: #21639D; }
+
+/* line 116, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/cards */
+body.en-de .card .content.de {
+  z-index: 1;
+  -webkit-transform: translateY(0px) rotateX(180deg);
+  -moz-transform: translateY(0px) rotateX(180deg);
+  -ms-transform: translateY(0px) rotateX(180deg);
+  -o-transform: translateY(0px) rotateX(180deg);
+  transform: translateY(0px) rotateX(180deg); }
+/* line 121, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/cards */
+body.en-de .card .content.en {
+  z-index: 2;
+  -webkit-transform: translateY(-250px) rotateX(0deg);
+  -moz-transform: translateY(-250px) rotateX(0deg);
+  -ms-transform: translateY(-250px) rotateX(0deg);
+  -o-transform: translateY(-250px) rotateX(0deg);
+  transform: translateY(-250px) rotateX(0deg); }
+
+/* line 129, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/cards */
+.cc:last-child .card {
+  -webkit-transform: translateZ(0px);
+  -moz-transform: translateZ(0px);
+  -ms-transform: translateZ(0px);
+  -o-transform: translateZ(0px);
+  transform: translateZ(0px);
+  opacity: 1; }
+
+/* line 135, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/cards */
+span.bravo {
+  display: none;
+  padding-top: 11px;
+  padding-bottom: 1px;
+  font-size: 2em;
+  text-align: center;
+  text-transform: uppercase; }
+
+/* line 145, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/cards */
+body.bravo span.bravo {
+  display: block; }
+/* line 149, /Volumes/Macintosh HD/Users/Marcello/Sites/cards/assets/scss/partials/cards */
+body.bravo .again a.btn.notknown {
+  display: none; }
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
