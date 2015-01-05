@@ -1,49 +1,69 @@
-<div id="viewport">
-    <div class="again">
-        <a href="#" class="btn btn-primary notknown"><span class="glyphicon glyphicon-repeat"></span> unbekannte</a>
-        <span class="bravo">Bravo!</span>
-        <a href="#" class="btn btn-primary all"><span class="glyphicon glyphicon-repeat"></span> alle</a>
-    </div>
-    {% for card in global.cards %}
-    <div class="cc unknown {% if forloop.last %}active{% endif %} {% if forloop.last == false %}random{% endif %}">
-        <div class="card" id="card{{ card.id }}" class="cat{{ card.cat }}">
-            <div class="content de">
-                {{ card.de }}
-                <!-- <i class="good fa fa-check"></i>
-                <i class="bad fa fa-remove"></i> -->
-                <span class="number">#{{ card.id }}</span>
+<div id="cards" class="container view">
+    <div id="viewport">
+        <div class="again">
+            <a href="#" class="btn btn-primary notknown"><span class="glyphicon glyphicon-repeat"></span> wiederholen</a>
+            <span class="bravo">Bravo!</span>
+            <a href="#" class="btn btn-primary all"><span class="glyphicon glyphicon-repeat"></span> alle wiederholen</a>
+        </div>
+        {% for card in global.cards %}
+        <div class="cc unknown {% if forloop.last == false %}random{% endif %}">
+            <div class="card" id="card{{ card.id }}" data-id="{{ card.id }}" class="cat{{ card.cat }}">
+                <div class="content de">
+                    {{ card.de }}
+                    <!-- <i class="good fa fa-check"></i>
+                    <i class="bad fa fa-remove"></i> -->
+                    <span class="number">#{{ card.id }}</span>
+                    <a href="#" class="star"><i class="fa fa-star"></i><i class="fa fa-star-o"></i></a>
+                </div>
+                <div class="content en">
+                    {{ card.en }}
+                    <!-- <i class="good fa fa-check"></i>
+                    <i class="bad fa fa-remove"></i> -->
+                    <span class="number">#{{ card.id }}</span>
+                    <a href="#" class="star"><i class="fa fa-star"></i><i class="fa fa-star-o"></i></a>
+                </div>
             </div>
-            <div class="content en">
-                {{ card.en }}
-                <!-- <i class="good fa fa-check"></i>
-                <i class="bad fa fa-remove"></i> -->
-                <span class="number">#{{ card.id }}</span>
+        </div>
+        {% endfor %}
+        <div class="cc unknown tutorial">
+            <div class="card">
+                <div class="content de">
+                    Swipe nach <b>rechts</b>, wenn du die Übersetzung <b>nicht</b> gewusst hast.
+                    <span class="number">tutorial</span>
+                </div>
+                <div class="content en">
+                    Swipe nach <b>rechts</b>, wenn du die Übersetzung <b>nicht</b> gewusst hast.
+                    <span class="number">tutorial</span>
+                </div>
+            </div>
+        </div>
+        <div class="cc tutorial unknown active">
+            <div class="card">
+                <div class="content de">
+                    Swipe nach <b>oben</b>, um die Übersetzung anzusehen.
+                    <span class="number">tutorial</span>
+                </div>
+                <div class="content en">
+                    Swipe nach <b>links</b>, wenn Du die Übersetzung gewusst hast.
+                    <span class="number">tutorial</span>
+                </div>
             </div>
         </div>
     </div>
-    {% endfor %}
-    <div class="cc unknown tutorial">
-        <div class="card">
-            <div class="content de">
-                swipe right to specify that you didn't knew the translation
-                <span class="number">turorial</span>
-            </div>
-            <div class="content en">
-                swipe right to specify that you didn't knew the translation
-                <span class="number">turorial</span>
-            </div>
-        </div>
+
+    <div id="shuffled" class="notification">
+        <i class="fa fa-check"></i>
+        Karten wurden gemischt
     </div>
-    <div class="cc tutorial unknown active">
-        <div class="card">
-            <div class="content de">
-                swipe up to flip me and reveal the translation
-                <span class="number">turorial</span>
-            </div>
-            <div class="content en">
-                swipe left to specify that you knew the translation
-                <span class="number">turorial</span>
-            </div>
-        </div>
-    </div>
+
+    <header>
+        <a href="#" class="back"><i class="fa fa-angle-left"></i> Kategorien</a>
+        <a href="#" id="tutorial" class="pull-right"><i class="fa fa-question"></i></a>
+    </header>
+
+    <footer>
+        <a href="#" class="shuffle"><i class="fa fa-random"></i></a>
+        <a href="#" class="direction en">en <i class="fa fa-angle-right"></i> de</a>
+        <a href="#" class="direction de">de <i class="fa fa-angle-right"></i> en</a>
+    </footer>
 </div>

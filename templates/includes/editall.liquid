@@ -1,0 +1,28 @@
+<div id="editall" class="container view">
+    <h4>Eigene Vokabeln</h4>
+    <ul class="list">
+        <li><a href="#">Keine Eigene Vokabeln</a></li>
+        <li><a href="#"><i class="fa fa-plus"></i> Vokabel hinzufügen</a></li>
+    </ul>
+    <h4>Vokabel Bibliothek</h4>
+    <ul class="list">
+        {% for card in global.cards %}
+            <li id="word{{ card.id }}" data-id="{{ card.id }}"><a href="#">{{ card.de | truncate: 30 }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <div id="saved" class="notification">
+        <i class="fa fa-check"></i>
+        Karten wurden gemischt
+    </div>
+
+    <header>
+        <a href="#" class="back"><i class="fa fa-angle-left"></i> Kategorien</a>
+    </header>
+
+    <!-- <footer>
+        <a href="#" class="shuffle"><i class="fa fa-random"></i></a>
+        <a href="#" class="direction en">en <i class="fa fa-angle-right"></i> de</a>
+        <a href="#" class="direction de">de <i class="fa fa-angle-right"></i> en</a>
+    </footer> -->
+</div>

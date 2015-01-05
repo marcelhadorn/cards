@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <!-- Title block allowing child pages to override -->
         <title>{% block title %}Empty{% endblock %}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <link rel="apple-touch-icon" href="/assets/images/bp-touch.png">
         <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
@@ -17,7 +17,7 @@
         <!-- Style block allowing child pages to inject their own styles -->
         {% block styles %}{% endblock %}
     </head>
-    <body data-spy="scroll" data-target=".navbar" data-offset="70" class="random-off">
+    <body data-spy="scroll" data-target=".navbar" data-offset="70" class="random-off choose">
         {% comment %}
         <header>
             {% include "navbar" %}
@@ -25,10 +25,10 @@
         {% endcomment %}
         {% block teaser %}
         {% endblock %}
-        <div id="wrapper" class="container">
-            <!-- Content block, child page inject content -->
-            {% block content %}{% endblock %}
-        </div>
+
+        <!-- Content block, child page inject content -->
+        {% block content %}{% endblock %}
+
         <!-- Script block allowing child pages to inject their own scripts -->
         {% block scripts %}{% endblock %}
         <footer>

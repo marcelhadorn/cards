@@ -6,10 +6,16 @@ html {
 body {
     background: transparent;
     min-height: 100%;
+    overflow: hidden;
 }
 
 * {
     text-shadow: none !important;
+    font-weight: 200;
+}
+
+h4 {
+    margin-left: 10px;
 }
 
 p {
@@ -54,11 +60,54 @@ a:not(.accordiontoggle):not(.btn) {
     border-color: $text-color;
 }
 
+#new {
+    display: none;
+}
+
 /* Custom page header */
 header {
-    height: 55px;
+    height: 44px;
+    padding: 8px 12px;
     position: fixed;
+    background: transparentize($brand-primary, .5);
+    width: 100%;
     top: 0;
+
+    a {
+        font-size: 1.5em;
+        border-bottom: none !important;
+
+        &#tutorial {
+            font-size: 2.2em;
+            margin-top: -7px;
+        }
+
+        span.done {
+            display: none;
+        }
+    }
+}
+
+#cards header {
+    @media screen and (orientation : landscape) {
+        display: none;
+    }
+}
+
+body.edit {
+    header a {
+        span.done {
+            display: inline-block;
+        }
+
+        span.edit {
+            display: none;
+        }
+    }
+
+    #new {
+        display: block;
+    }
 }
 
 /* Make the masthead heading the same height as the navigation */
@@ -66,8 +115,29 @@ header h2 {
     line-height: 40px;
 }
 
+.view {
+        height: 100%;
+    min-height: 100%;
+    position: absolute;
+    padding: 44px 0;
+    width: 100%;
+    overflow: scroll;
+    display: block;
+    left: 100%;
+    @include transition(.3s $ease-in-out-quad left);
 
-#wrapper {
+    &#categories {
+        left: -100%;
+        background-color: transparentize($brand-primary, .8);
+    }
+
+    &.active {
+        left: 0% !important;
+    }
+}
+
+
+#cards {
     height: 100%;
     min-height: 100%;
     position: absolute;
@@ -158,6 +228,50 @@ body.en-de {
     p {
         color: $brand-info;
         font-size: 1.2em;
+    }
+}
+
+
+ul.list {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+        height: 44px;
+        font-size: 1.5em;
+        background-color: $brand-primary;
+        border-bottom: 1px solid transparentize(white, .5);
+
+        &:first-child {
+            border-top: 1px solid transparentize(white, .5);
+        }
+
+        a {
+            padding: 6px 12px;
+            display: block;
+            border-bottom: none !important;
+        }
+    }
+
+    i.fa-angle-right {
+        font-size: 1.4em;
+    }
+
+    input {
+        height: 100%;
+        box-shadow: none !important;
+        -webkit-appearance: none !important;
+        border-radius: none;
+        border: none;
+        font-size: 1.3em;
+    }
+
+    li .fa-check {
+        opacity: 0;
+    }
+
+    li.active .fa-check {
+        opacity: 1;
     }
 }
 
