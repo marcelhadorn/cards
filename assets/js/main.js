@@ -103,6 +103,12 @@
 					}
 
 				}
+
+				if ($('body.staronly').length) {
+					countCardsStarred();
+				} else {
+					countCards();
+				}
 			},
 			threshold:110,
 			maxTimeThreshold:2500,
@@ -132,15 +138,77 @@
 	    return $(shuffled);
 	};
 
+	function countCards() {
+		var total = $('.cc:not(.tutorial)').length,
+			remaining = $('.cc.unknown:not(.tutorial)').length;
+
+		console.log(total);
+
+		$('#remaining').text(remaining);
+		$('#total').text(total);
+
+		$('#percentage').width(''+ remaining / total * 100 +'%');
+	}
+
+	function countCardsStarred() {
+		var total = $('.cc:not(.tutorial) .starred').length,
+			remaining = $('.cc.unknown:not(.tutorial) .starred').length;
+
+		console.log(total);
+
+		$('#remaining').text(remaining);
+		$('#total').text(total);
+
+		$('#percentage').width(''+ remaining / total * 100 +'%');
+	}
+
+
 })(jQuery);
 
 $(document).on('ready', function(){
+
+		function countCards() {
+		var total = $('.cc:not(.tutorial)').length,
+			remaining = $('.cc.unknown:not(.tutorial)').length;
+
+		console.log(total);
+
+		$('#remaining').text(remaining);
+		$('#total').text(total);
+
+		$('#percentage').width(''+ remaining / total * 100 +'%');
+	}
+
+	function countCardsStarred() {
+		var total = $('.cc:not(.tutorial) .starred').length,
+			remaining = $('.cc.unknown:not(.tutorial) .starred').length;
+
+		console.log(total);
+
+		$('#remaining').text(remaining);
+		$('#total').text(total);
+
+		$('#percentage').width(''+ remaining / total * 100 +'%');
+	}
 
 	$(document).on('touchend', 'body.choose #all', function(){
 		$('.view').each(function(){
 			$(this).removeClass('active');
 		});
 		$('#cards').addClass('active');
+		$('body').addClass('all');
+
+		countCards();
+	});
+
+	$(document).on('touchend', 'body.choose #custom', function(){
+		$('.view').each(function(){
+			$(this).removeClass('active');
+		});
+		$('#cards').addClass('active');
+		$('body').addClass('all');
+
+		countCards();
 	});
 
 	$(document).on('touchend', 'body.edit #all', function(){
@@ -157,11 +225,63 @@ $(document).on('ready', function(){
 		$('#editcat').addClass('active');
 	});
 
-	$('.back').on('touchend', function(){
+	$(document).on('touchend', 'body.edit #custom', function(){
+		$('.view').each(function(){
+			$(this).removeClass('active');
+		});
+		$('#editcat').addClass('active');
+		$('body').addClass('custom');
+	});
+
+	$(document).on('touchend', 'body.choose #starred', function(){
+		$('.view').each(function(){
+			$(this).removeClass('active');
+		});
+		$('#cards').addClass('active');
+		$('body').addClass('staronly');
+
+		$('.cc').addClass('known');
+		$('.cc').addClass('unknown');
+		$('.card:not(.starred)').parents('.cc').removeClass('unknown');
+		$('.card.starred').parents('.cc').removeClass('known active');
+		$('.cc.active').removeClass('active');
+		$('.cc.unknown').last().addClass('active').children('.card').css({transform: 'translateZ(0px) rotateX(1deg)' });
+
+		$('.cc.known').animate({transform: 'translateX(-780px) rotate(-5deg)' }, 0, "easeInOutCubic");
+
+		countCardsStarred();
+	});
+
+	$(document).on('touchend', 'body.edit #starred', function(){
+		$('.view').each(function(){
+			$(this).removeClass('active');
+		});
+		$('#stars').addClass('active');
+	});
+
+	$(document).on('touchend', '.back', function(){
 		$('.view').each(function(){
 			$(this).removeClass('active');
 		});
 		$('#categories').addClass('active');
+		$('body').removeClass('staronly all custom');
+
+		var retrievedObject = localStorage.getItem('stars');
+
+		if(retrievedObject) {
+			var stars = JSON.parse(retrievedObject);
+
+			console.log(stars);
+
+			$('.word').removeClass('starred');
+			$('.card').removeClass('starred');
+
+			$.each(stars, function(){
+				console.log('#starcard'+ this +'');
+				$('#card'+ this +'').addClass('starred');
+				$('#starcard'+ this +'').addClass('starred');
+			});
+		}
 	});
 
 	$('li.word').on('touchend', function(){
@@ -251,7 +371,7 @@ $(document).on('ready', function(){
 		}, (cards * delay) + 700);
 	});
 
-	$('a.all').on('touchend', function(e){
+	$(document).on('touchend', 'body.all a.all', function(e){
 		e.preventDefault();
 
 		var cards = $('.cc').length,
@@ -273,11 +393,49 @@ $(document).on('ready', function(){
 			$('.cc:not(.tutorial)').last().addClass('active').children('.card').css({transform: 'translateZ(0px) rotateX(1deg)' });
 			$('.cc').addClass('random');
 			$('.cc.tutorial, .cc.active').removeClass('random');
+
+			countCards();
 		}, (cards * delay) + 300);
 
 	});
 
-	$('a.notknown').on('touchend', function(e){
+	$(document).on('touchend', 'body.staronly a.all', function(e){
+		e.preventDefault();
+
+		var cards = $('.cc').length,
+			delay = 20;
+
+		$('.cc:not(.tutorial) .starred').each(function(indexInArray){
+			var thiscc = $(this).parents('.cc'),
+				thiscard = thiscc.children('.card')
+
+			thiscard.css({transform: 'translateZ(-150px) rotateX(1deg)' });
+			thiscc.removeClass('known').addClass('unknown').css('z-index', 0);
+
+			setTimeout(function(){
+				thiscc.animate({transform: 'translateX(0px)' }, 600, "easeInOutCubic");
+			}, indexInArray * delay);
+		});
+
+		setTimeout(function(){
+			$('.cc:not(.tutorial)').last().children('.card').css({transform: 'translateZ(0px) rotateX(1deg)' });
+			$('.cc').addClass('random');
+			$('.cc.tutorial, .cc.active').removeClass('random');
+		}, (cards * delay) + 300);
+
+		$('.cc').addClass('known');
+		$('.cc').addClass('unknown');
+		$('.card:not(.starred)').parents('.cc').removeClass('unknown');
+		$('.card.starred').parents('.cc').removeClass('known active');
+		$('.cc.active').removeClass('active');
+		$('.cc.unknown').last().addClass('active').children('.card').css({transform: 'translateZ(0px) rotateX(1deg)' });
+
+		$('.cc.known').animate({transform: 'translateX(-780px) rotate(-5deg)' }, 0, "easeInOutCubic");
+
+		countCardsStarred();
+	});
+
+	$(document).on('touchend', 'a.notknown', function(e){
 		e.preventDefault();
 
 		var cards = $('.cc.unknown').length,
@@ -301,6 +459,11 @@ $(document).on('ready', function(){
 			$('.cc.tutorial, .cc.active').removeClass('random');
 		}, (cards * delay) + 300);
 
+		if ($('body.staronly').length) {
+			countCardsStarred();
+		} else {
+			countCards();
+		}
 	});
 
 	$('a.star').on('touchend', function(){
@@ -344,6 +507,49 @@ $(document).on('ready', function(){
 		console.log(starCardID);
 	});
 
+	$('li.word a').on('touchend', function(){
+
+		var star = $(this),
+			starCard = star.parents('.word'),
+			starCardID = starCard.data('id');
+
+		var addItem = function (stars) {
+			var oldItems = JSON.parse(localStorage.getItem('stars')) || [];
+
+			var newItem = stars
+
+			oldItems.push(newItem);
+
+			console.log(oldItems);
+
+			localStorage.setItem('stars', JSON.stringify(oldItems));
+		}
+
+		var removeItem = function (stars) {
+			var oldItems = JSON.parse(localStorage.getItem('stars')) || [];
+
+			var index = oldItems.indexOf(stars);
+
+			if (index > -1) {
+    			oldItems.splice(index, 1);
+			}
+
+			console.log(oldItems);
+
+			localStorage.setItem('stars', JSON.stringify(oldItems));
+		}
+
+		if(starCard.hasClass('starred')) {
+			starCard.removeClass('starred');
+			removeItem(starCardID);
+		} else {
+			starCard.addClass('starred');
+			addItem(starCardID);
+		}
+
+		console.log(starCardID);
+	});
+
 	var retrievedObject = localStorage.getItem('stars');
 
 	if(retrievedObject) {
@@ -354,6 +560,7 @@ $(document).on('ready', function(){
 		$.each(stars, function(){
 			console.log('#card'+ this +'');
 			$('#card'+ this +'').addClass('starred');
+			$('#starcard'+ this +'').addClass('starred');
 		});
 	}
 

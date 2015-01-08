@@ -68,7 +68,7 @@ a:not(.accordiontoggle):not(.btn) {
 header {
     height: 44px;
     padding: 8px 12px;
-    position: fixed;
+    position: absolute;
     background: transparentize($brand-primary, .5);
     width: 100%;
     top: 0;
@@ -86,6 +86,27 @@ header {
             display: none;
         }
     }
+
+    .fa-circle-o, .fa-star, .fa-user {
+        font-size: 1.9em;
+        margin-top: 0px;
+        left: 50%;
+        position: absolute;
+        @include transform(translateX(-50%));
+        display: none;
+    }
+}
+
+body.custom header .fa-user {
+    display: inline-block;
+}
+
+body.all header .fa-circle-o {
+    display: inline-block;
+}
+
+body.staronly header .fa-star {
+    display: inline-block;
 }
 
 #cards header {
@@ -124,15 +145,19 @@ header h2 {
     overflow: scroll;
     display: block;
     left: 100%;
-    @include transition(.3s $ease-in-out-quad left);
+    @include transition(.3s $ease-in-out-quad -webkit-transform);
 
     &#categories {
         left: -100%;
         background-color: transparentize($brand-primary, .8);
+
+        &.active {
+            @include transform(translateX(100%) !important);
+        }
     }
 
     &.active {
-        left: 0% !important;
+        @include transform(translateX(-100%) !important);
     }
 }
 
