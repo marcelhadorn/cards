@@ -1,12 +1,12 @@
-<div id="editcat" class="container view">
+<div id="newcat" class="container view">
     <h4>Kategorie Details</h4>
     <ul class="list">
-        <li><input type="text" class="form-control" placeholder="Kategorie Bezeichnung" value="Eigene Vokabel Kategorie"></li>
+        <li><input type="text" class="form-control" placeholder="Kategorie Bezeichnung"></li>
     </ul>
     <h4>Enthaltene Vokabeln</h4>
     <ul class="list">
         {% for card in global.cards %}
-            <li class="word active" id="editword{{ card.id }}" data-id="{{ card.id }}"><a href="#"><i class="fa fa-check"></i><i class="fa fa-close"></i> {{ card.de | truncate: 25 }}</a></li>
+            <li class="word" id="wordedit{{ card.id }}" data-id="{{ card.id }}"><a href="#"><i class="fa fa-check"></i><i class="fa fa-close"></i> {{ card.de | truncate: 25 }}</a></li>
         {% endfor %}
     </ul>
 

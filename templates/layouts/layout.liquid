@@ -13,11 +13,11 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         {% comment %}<script type="text/javascript" src="//use.typekit.net/nxn5emc.js"></script>
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>{% endcomment %}
-        {{ "/assets/css/style.css" | asset_url | stylesheet_tag }}
+        {{ "/assets/css/style-1.2.css" | asset_url | stylesheet_tag }}
         <!-- Style block allowing child pages to inject their own styles -->
         {% block styles %}{% endblock %}
     </head>
-    <body data-spy="scroll" data-target=".navbar" data-offset="70" class="random-off choose">
+    <body data-spy="scroll" data-target=".navbar" data-offset="70" class="choose">
         {% comment %}
         <header>
             {% include "navbar" %}
@@ -35,6 +35,6 @@
             {% include "footer" %}
         </footer>
         {{ "application.min.js" | asset_url | script_tag }}
-        {{ "main.js" | asset_url | script_tag }}
+        {{ "main-1.2.js" | asset_url | script_tag }}
     </body>
 </html>

@@ -15,7 +15,7 @@ $height: 250px;
     }
 }
 
-.cc, .again, .tutorial {
+.cc, .again, .tutorial, .nostarred {
     width: 89%;
     margin: 5%;
     position: absolute;
@@ -32,7 +32,7 @@ $height: 250px;
     }
 }
 
-.again {
+.again, .nostarred {
     z-index: 0;
     @include transform(translateZ(-160px));
     width: 60%;
@@ -52,6 +52,10 @@ $height: 250px;
             font-size: .7em;
         }
     }
+}
+
+.nostarred a.btn {
+    text-align: center;
 }
 
 // Card Design
@@ -200,11 +204,15 @@ body.bravo {
     top: 43.3%;
     @include transform(translateZ(500px) translateY(-50%) scale(.5));
     opacity: 0;
-    background-color: transparentize($brand-primary, .2);
-    padding: 30px 10px 40px;
-    border-radius: 10px;
-    @include transition(.7s $ease-in-out-back all);
+    background-color: transparentize($brand-primary, .1);
+    border: 1px solid white;
+    border-radius: 6px;
+    @include transition(.5s $ease-in-out-back all);
     display: none;
+
+    .info {
+        padding: 30px 10px 30px;
+    }
 
     &.show {
          display: block;
@@ -227,6 +235,32 @@ body.bravo {
         margin: 0 auto;
         font-size: 3em;
     }
+
+    &.trash, &#reseting {
+        padding-bottom: 0px;
+
+        .btn-group {
+            width: 100%;
+            margin: -10px 0px 0;
+        }
+
+        .btn {
+            width: 50%;
+            display: inline-block;
+            border: none;
+            border-top: 1px solid white;
+            border-top-right-radius: 0px;
+            border-top-left-radius: 0px;
+
+            &.yes {
+                border-right: 2px solid white !important;
+            }
+        }
+    }
+
+    &#reseting .info {
+        font-size: .7em;
+    }
 }
 
 #counter {
@@ -234,6 +268,10 @@ body.bravo {
     top: 70px;
     right: 7%;
     width: 87%;
+
+    @media screen and (orientation : landscape) {
+        top: 10px;
+    }
 
     #index {
         width: 100%;
@@ -245,18 +283,27 @@ body.bravo {
     }
 
     #countercontainer {
+        margin-top: 2px;
         width: 100%;
-        height: 10px;
+        height: 9px;
         display: block;
         border-radius: 5px;
         background-color: $brand-primary;
     }
 
     #percentage {
-        height: 10px;
+        height: 9px;
         display: block;
         border-radius: 5px;
         @include transition(.3s $ease-in-out-quad width);
         background-color: darken($brand-primary, 20%);
     }
+}
+
+#reset {
+    display: none;
+}
+
+body.shuffled #reset {
+    display: block;
 }

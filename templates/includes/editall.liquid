@@ -2,7 +2,7 @@
     <h4>Eigene Vokabeln</h4>
     <ul class="list">
         <li><a href="#">Keine Eigene Vokabeln</a></li>
-        <li><a href="#"><i class="fa fa-plus"></i> Vokabel hinzufügen</a></li>
+        <li><a id="newvocable" href="#"><i class="fa fa-plus"></i> Vokabel hinzufügen</a></li>
     </ul>
     <h4>Vokabel Bibliothek</h4>
     <ul class="list">
@@ -10,11 +10,6 @@
             <li id="word{{ card.id }}" data-id="{{ card.id }}"><a href="#">{{ card.de | truncate: 30 }}</a></li>
         {% endfor %}
     </ul>
-
-    <div id="saved" class="notification">
-        <i class="fa fa-check"></i>
-        Karten wurden gemischt
-    </div>
 
     <header>
         <a href="#" class="back"><i class="fa fa-angle-left"></i> Kategorien</a>

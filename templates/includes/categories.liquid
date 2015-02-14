@@ -3,21 +3,28 @@
         <li id="all"><a href="#"><i class="fa fa-circle-o"></i>&nbsp;&nbsp;Alle Vokabeln <i class="fa fa-angle-right pull-right"></i></a></li>
         <li id="starred"><a href="#"><i class="fa fa-star"></i>&nbsp;&nbsp;Gekennzeichnete Vokabeln <i class="fa fa-angle-right pull-right"></i></a></li>
         <li id="custom"><a href="#"><i class="fa fa-user"></i>&nbsp;&nbsp;Eigene Vokabel Kategorie <i class="fa fa-angle-right pull-right"></i></a></li>
-        <li id="new"><a href="#"><i class="fa fa-plus"></i>&nbsp;&nbsp;Kategorie hinzufügen</a></li>
+
     </ul>
 
-    <div id="saved" class="notification">
-        <i class="fa fa-check"></i>
-        Karten wurden gemischt
+    <a id="new" class="btn btn-primary btn-lg" style="margin: 20px;" href="#"><i class="fa fa-plus"></i>&nbsp;&nbsp;Kategorie hinzufügen</a>
+
+    <div id="reseting" class="notification">
+        <div class="info">
+            <i class="fa fa-exclamation-triangle"></i>
+            Wenn die Karten geordnet werden, werden die Stapel zurückgesetzt.
+            Karten Ordnen?
+        </div>
+        <div class="btn-group">
+            <a href="/" class="btn btn-primary btn-lg yes">Ja</a>
+            <a href="#" class="btn btn-primary btn-lg trashing no">Nein</a>
+        </div>
     </div>
 
     <header>
         <a href="#" class="text-center">Kategorien</a> <a id="edit" href="#" class="pull-right"><i class="fa fa-pencil"></i> <span class="edit">Edit</span><span class="done">Fertig</span></a>
     </header>
 
-    <!-- <footer>
-        <a href="#" class="shuffle"><i class="fa fa-random"></i></a>
-        <a href="#" class="direction en">en <i class="fa fa-angle-right"></i> de</a>
-        <a href="#" class="direction de">de <i class="fa fa-angle-right"></i> en</a>
-    </footer> -->
+    <footer>
+        <a href="#" id="reset" style="width: 100%"><i class="fa fa-refresh"></i> karten ordnen</a>
+    </footer>
 </div>

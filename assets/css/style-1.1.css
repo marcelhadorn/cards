@@ -1,4 +1,4 @@
-/* [sass, assets/scss, style.scss] */
+/* [sass, assets/scss, style-1.1.scss] */
 /*
 #################################################
 App: Blueprint, Author: Marcel Hadorn (@marc3llo)
@@ -7634,16 +7634,19 @@ header {
     -o-transform: translateX(-50%);
     transform: translateX(-50%);
     display: none; }
+  /* line 99, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+  header span.edit {
+    display: inline-block; }
 
-/* line 100, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+/* line 104, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
 body.custom header .fa-user {
   display: inline-block; }
 
-/* line 104, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
-body.all header .fa-circle-o {
+/* line 108, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+body.all:not(.custom) header .fa-circle-o {
   display: inline-block; }
 
-/* line 108, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+/* line 112, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
 body.staronly header .fa-star {
   display: inline-block; }
 
@@ -7651,22 +7654,22 @@ body.staronly header .fa-star {
   #cards header {
     display: none; } }
 
-/* line 120, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+/* line 124, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
 body.edit header a span.done {
   display: inline-block; }
-/* line 124, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+/* line 128, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
 body.edit header a span.edit {
   display: none; }
-/* line 129, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+/* line 133, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
 body.edit #new {
   display: block; }
 
 /* Make the masthead heading the same height as the navigation */
-/* line 135, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+/* line 139, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
 header h2 {
   line-height: 40px; }
 
-/* line 139, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+/* line 143, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
 .view {
   height: 100%;
   min-height: 100%;
@@ -7679,18 +7682,18 @@ header h2 {
   -webkit-transition: 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) -webkit-transform;
   -moz-transition: 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) -webkit-transform;
   transition: 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) -webkit-transform; }
-  /* line 150, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+  /* line 154, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
   .view#categories {
     left: -100%;
     background-color: rgba(33, 99, 157, 0.2); }
-    /* line 154, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+    /* line 158, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
     .view#categories.active {
       -webkit-transform: translateX(100%) !important;
       -moz-transform: translateX(100%) !important;
       -ms-transform: translateX(100%) !important;
       -o-transform: translateX(100%) !important;
       transform: translateX(100%) !important; }
-  /* line 159, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+  /* line 163, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
   .view.active {
     -webkit-transform: translateX(-100%) !important;
     -moz-transform: translateX(-100%) !important;
@@ -7698,7 +7701,7 @@ header h2 {
     -o-transform: translateX(-100%) !important;
     transform: translateX(-100%) !important; }
 
-/* line 165, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+/* line 169, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
 #cards {
   height: 100%;
   min-height: 100%;
@@ -7711,11 +7714,11 @@ header h2 {
   -webkit-transform-style: preserve-3d;
   -webkit-transform: translate3d(0, 0, 0); }
 
-/* line 178, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+/* line 182, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
 .footer {
   color: #777; }
 
-/* line 182, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+/* line 186, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
 footer {
   padding-left: 15px;
   padding-right: 15px;
@@ -7725,10 +7728,10 @@ footer {
   padding: 0;
   background: rgba(33, 99, 157, 0.5);
   width: 100%; }
-  /* line 192, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+  /* line 196, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
   footer a {
     border-bottom: none !important;
-    font-size: 2.8rem;
+    font-size: 2.3rem;
     width: 50%;
     padding: 13px 0px 15px;
     display: inline-block;
@@ -7739,85 +7742,125 @@ footer {
     transition: 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) all;
     display: block;
     float: left; }
-    /* line 204, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+    /* line 208, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
     footer a.touch {
       background-color: #184873; }
-    /* line 208, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+    /* line 212, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
     footer a.shuffle {
       padding: 16px 0px 12px; }
-    /* line 213, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+    /* line 217, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
     footer a.direction i {
       font-size: 0.9em;
       font-weight: bold; }
-    /* line 218, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+    /* line 222, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
     footer a.direction.de {
       display: none; }
+    /* line 227, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+    footer a:first-child {
+      border-right: 1px solid #1e5b90; }
   @media screen and (orientation: landscape) {
     footer {
       display: none; } }
 
-/* line 230, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+/* line 238, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
 body.en-de footer a.direction.en {
   display: none; }
-/* line 234, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+/* line 242, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
 body.en-de footer a.direction.de {
   display: block; }
 
-/* line 239, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+/* line 247, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
 .jumbotron {
   border: 1px solid white; }
 
-/* line 243, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+/* line 251, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
 .teaser {
   border-bottom: 1px solid white; }
 
-/* line 247, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+/* line 255, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
 .contact {
   margin: 0px auto 30px;
   padding: 10px 20px 20px;
   text-align: center;
   background-color: white;
   color: #2570a5; }
-  /* line 253, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+  /* line 261, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
   .contact p {
     color: #2570a5;
     font-size: 1.2em; }
 
-/* line 260, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+/* line 268, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
 ul.list {
   list-style: none;
   padding-left: 0; }
-  /* line 264, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+  /* line 272, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
   ul.list li {
     height: 44px;
     font-size: 1.5em;
     background-color: #21639D;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
-    /* line 270, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+    /* line 278, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
     ul.list li:first-child {
       border-top: 1px solid rgba(255, 255, 255, 0.5); }
-    /* line 274, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+    /* line 282, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
     ul.list li a {
       padding: 6px 12px;
       display: block;
       border-bottom: none !important; }
-  /* line 281, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+  /* line 289, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
   ul.list i.fa-angle-right {
     font-size: 1.4em; }
-  /* line 285, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
-  ul.list input {
+  /* line 293, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+  ul.list input, ul.list textarea {
     height: 100%;
     box-shadow: none !important;
     -webkit-appearance: none !important;
     border-radius: none;
     border: none;
     font-size: 1.3em; }
-  /* line 294, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+  /* line 302, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
   ul.list li .fa-check {
-    opacity: 0; }
-  /* line 298, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+    display: none; }
+  /* line 306, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+  ul.list li .fa-close, ul.list li .fa-check {
+    width: 25px;
+    text-align: center;
+    margin-right: 6px; }
+  /* line 312, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
   ul.list li.active .fa-check {
-    opacity: 1; }
+    display: inline-block; }
+  /* line 316, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+  ul.list li.active .fa-close {
+    display: none; }
+
+/* line 321, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+#vocable ul.list li {
+  height: 132px; }
+
+/* line 327, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+body.choose #starred {
+  display: none; }
+/* line 331, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+body.choose .nostarred {
+  display: none; }
+/* line 335, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+body.choose .again {
+  display: block; }
+/* line 340, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+body.choose.staronly .nostarred {
+  display: block; }
+/* line 344, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+body.choose.staronly .again {
+  display: none; }
+/* line 350, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+body.choose.starreditems #starred {
+  display: block; }
+/* line 355, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+body.choose.starreditems.staronly .nostarred {
+  display: none; }
+/* line 359, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/basic */
+body.choose.starreditems.staronly .again {
+  display: block; }
 
 /* line 1, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/forms */
 input, textarea, .form-control {
@@ -8349,7 +8392,7 @@ body.signedin #signoutform {
       transform: translateY(-50%); } }
 
 /* line 18, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
-.cc, .again, .tutorial {
+.cc, .again, .tutorial, .nostarred {
   width: 89%;
   margin: 5%;
   position: absolute;
@@ -8371,7 +8414,7 @@ body.signedin #signoutform {
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
   /* line 30, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
-  .cc.active, .again.active, .tutorial.active {
+  .cc.active, .again.active, .tutorial.active, .nostarred.active {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
@@ -8379,7 +8422,7 @@ body.signedin #signoutform {
     transform: translateX(0); }
 
 /* line 35, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
-.again {
+.again, .nostarred {
   z-index: 0;
   -webkit-transform: translateZ(-160px);
   -moz-transform: translateZ(-160px);
@@ -8393,16 +8436,20 @@ body.signedin #signoutform {
   border-radius: 5px;
   height: auto; }
   /* line 45, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
-  .again a.btn {
+  .again a.btn, .nostarred a.btn {
     font-size: 1.6em;
     display: block;
     margin: 5px;
     text-align: left; }
     /* line 51, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
-    .again a.btn span {
+    .again a.btn span, .nostarred a.btn span {
       font-size: 0.7em; }
 
-/* line 58, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+/* line 57, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+.nostarred a.btn {
+  text-align: center; }
+
+/* line 62, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
 .card {
   height: 250px;
   -webkit-transform-style: preserve-3d;
@@ -8423,7 +8470,7 @@ body.signedin #signoutform {
   -ms-transform: translateZ(-150px) rotate(0deg);
   -o-transform: translateZ(-150px) rotate(0deg);
   transform: translateZ(-150px) rotate(0deg); }
-  /* line 65, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+  /* line 69, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
   .card .content {
     padding: 25px 30px;
     font-size: 2em;
@@ -8438,7 +8485,7 @@ body.signedin #signoutform {
     -o-transform: rotateX(0.1deg);
     transform: rotateX(0.1deg);
     font-weight: 400; }
-    /* line 75, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+    /* line 79, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
     .card .content .number {
       display: inline-block;
       position: absolute;
@@ -8448,7 +8495,7 @@ body.signedin #signoutform {
       opacity: 0.2;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden; }
-    /* line 85, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+    /* line 89, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
     .card .content .good, .card .content .bad {
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
@@ -8456,18 +8503,18 @@ body.signedin #signoutform {
       position: absolute;
       display: block;
       top: 75%; }
-    /* line 93, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+    /* line 97, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
     .card .content .good {
       color: #5cb85c;
       left: 32%; }
-    /* line 98, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+    /* line 102, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
     .card .content .bad {
       color: #e25e47;
       left: 58%; }
-    /* line 103, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+    /* line 107, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
     .card .content.de {
       z-index: 2; }
-    /* line 107, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+    /* line 111, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
     .card .content.en {
       -webkit-transform: translateY(-250px) rotateX(180deg);
       -moz-transform: translateY(-250px) rotateX(180deg);
@@ -8477,11 +8524,11 @@ body.signedin #signoutform {
       background: white;
       border-left-color: #0f2e49;
       color: #21639D; }
-      /* line 113, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+      /* line 117, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
       .card .content.en a.star {
         color: #21639D; }
 
-/* line 120, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+/* line 124, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
 a.star {
   border-bottom: none !important;
   position: absolute;
@@ -8489,26 +8536,26 @@ a.star {
   right: 6px;
   padding: 0px 10px;
   font-size: 1.3em; }
-  /* line 128, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+  /* line 132, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
   a.star .fa-star {
     display: none; }
 
-/* line 134, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+/* line 138, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
 li.word .fa-star {
   display: none; }
 
-/* line 141, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+/* line 145, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
 .card.starred .fa-star-o, .word.starred .fa-star-o {
   display: none; }
-/* line 145, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+/* line 149, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
 .card.starred .fa-star, .word.starred .fa-star {
   display: inline-block; }
 
-/* line 150, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+/* line 154, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
 .tutorial .card .content {
   border-left-color: black; }
 
-/* line 156, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+/* line 160, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
 body.en-de .card .content.de {
   z-index: 1;
   -webkit-transform: translateY(0px) rotateX(180deg);
@@ -8516,7 +8563,7 @@ body.en-de .card .content.de {
   -ms-transform: translateY(0px) rotateX(180deg);
   -o-transform: translateY(0px) rotateX(180deg);
   transform: translateY(0px) rotateX(180deg); }
-/* line 161, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+/* line 165, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
 body.en-de .card .content.en {
   z-index: 2;
   -webkit-transform: translateY(-250px) rotateX(0deg);
@@ -8525,7 +8572,7 @@ body.en-de .card .content.en {
   -o-transform: translateY(-250px) rotateX(0deg);
   transform: translateY(-250px) rotateX(0deg); }
 
-/* line 169, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+/* line 173, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
 .cc:last-child .card {
   -webkit-transform: translateZ(0px);
   -moz-transform: translateZ(0px);
@@ -8534,7 +8581,7 @@ body.en-de .card .content.en {
   transform: translateZ(0px);
   opacity: 1; }
 
-/* line 175, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+/* line 179, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
 span.bravo {
   display: none;
   padding-top: 11px;
@@ -8543,14 +8590,14 @@ span.bravo {
   text-align: center;
   text-transform: uppercase; }
 
-/* line 185, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+/* line 189, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
 body.bravo span.bravo {
   display: block; }
-/* line 189, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+/* line 193, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
 body.bravo .again a.btn.notknown {
   display: none; }
 
-/* line 194, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+/* line 198, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
 .notification {
   font-size: 2em;
   width: 70%;
@@ -8564,17 +8611,20 @@ body.bravo .again a.btn.notknown {
   -o-transform: translateZ(500px) translateY(-50%) scale(0.5);
   transform: translateZ(500px) translateY(-50%) scale(0.5);
   opacity: 0;
-  background-color: rgba(33, 99, 157, 0.8);
-  padding: 30px 10px 40px;
-  border-radius: 10px;
-  -webkit-transition: 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
-  -moz-transition: 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
-  transition: 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+  background-color: rgba(33, 99, 157, 0.9);
+  border: 1px solid white;
+  border-radius: 6px;
+  -webkit-transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+  -moz-transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+  transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
   display: none; }
-  /* line 209, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+  /* line 213, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+  .notification .info {
+    padding: 30px 10px 30px; }
+  /* line 217, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
   .notification.show {
     display: block; }
-  /* line 213, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+  /* line 221, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
   .notification.in {
     -webkit-transform: translateZ(500px) translateY(-50%) scale(1);
     -moz-transform: translateZ(500px) translateY(-50%) scale(1);
@@ -8582,7 +8632,7 @@ body.bravo .again a.btn.notknown {
     -o-transform: translateZ(500px) translateY(-50%) scale(1);
     transform: translateZ(500px) translateY(-50%) scale(1);
     opacity: 1; }
-  /* line 218, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+  /* line 226, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
   .notification.out {
     -webkit-transform: translateZ(500px) translateY(-50%) scale(3);
     -moz-transform: translateZ(500px) translateY(-50%) scale(3);
@@ -8590,43 +8640,76 @@ body.bravo .again a.btn.notknown {
     -o-transform: translateZ(500px) translateY(-50%) scale(3);
     transform: translateZ(500px) translateY(-50%) scale(3);
     opacity: 0; }
-  /* line 223, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+  /* line 231, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
   .notification i {
     display: block;
     text-align: center;
     width: 80px;
     margin: 0 auto;
     font-size: 3em; }
+  /* line 239, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+  .notification.trash, .notification#reseting {
+    padding-bottom: 0px; }
+    /* line 242, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+    .notification.trash .btn-group, .notification#reseting .btn-group {
+      width: 100%;
+      margin: -10px 0px 0; }
+    /* line 247, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+    .notification.trash .btn, .notification#reseting .btn {
+      width: 50%;
+      display: inline-block;
+      border: none;
+      border-top: 1px solid white;
+      border-top-right-radius: 0px;
+      border-top-left-radius: 0px; }
+      /* line 255, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+      .notification.trash .btn.yes, .notification#reseting .btn.yes {
+        border-right: 2px solid white !important; }
+  /* line 261, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+  .notification#reseting .info {
+    font-size: 0.7em; }
 
-/* line 232, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+/* line 266, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
 #counter {
   position: absolute;
   top: 70px;
   right: 7%;
   width: 87%; }
-  /* line 238, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+  @media screen and (orientation: landscape) {
+    #counter {
+      top: 10px; } }
+  /* line 276, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
   #counter #index {
     width: 100%;
     text-align: right; }
-  /* line 243, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+  /* line 281, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
   #counter span {
     text-align: right; }
-  /* line 247, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+  /* line 285, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
   #counter #countercontainer {
+    margin-top: 2px;
     width: 100%;
-    height: 10px;
+    height: 9px;
     display: block;
     border-radius: 5px;
     background-color: #21639D; }
-  /* line 255, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+  /* line 294, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
   #counter #percentage {
-    height: 10px;
+    height: 9px;
     display: block;
     border-radius: 5px;
     -webkit-transition: 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) width;
     -moz-transition: 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) width;
     transition: 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) width;
     background-color: #0f2e49; }
+
+/* line 303, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+#reset {
+  display: none; }
+
+/* line 307, /Users/marcel/Sites/_sfgb/cards/assets/scss/partials/cards */
+body.shuffled #reset {
+  display: block; }
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {

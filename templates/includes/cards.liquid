@@ -1,13 +1,17 @@
 <div id="cards" class="container view">
     <div id="viewport">
         <div class="again">
-            <a href="#" class="btn btn-primary notknown"><span class="glyphicon glyphicon-repeat"></span> wiederholen</a>
+            <a href="#" class="btn btn-primary notknown"><span class="glyphicon glyphicon-repeat"></span> nur unbekannte</a>
             <span class="bravo">Bravo!</span>
             <a href="#" class="btn btn-primary all"><span class="glyphicon glyphicon-repeat"></span> alle wiederholen</a>
         </div>
+        <div class="nostarred">
+            <h4 class="">Keine gekennzeichnete Vokabel Karten</h4>
+            <a href="#" class="btn btn-primary back text-center">zurück</a>
+        </div>
         {% for card in global.cards %}
         <div class="cc unknown {% if forloop.last == false %}random{% endif %}">
-            <div class="card" id="card{{ card.id }}" data-id="{{ card.id }}" class="cat{{ card.cat }}">
+            <div class="card" id="card{{ card.id }}" data-id="{{ card.id }}">
                 <div class="content de">
                     {{ card.de }}
                     <!-- <i class="good fa fa-check"></i>
@@ -28,11 +32,11 @@
         <div class="cc unknown tutorial">
             <div class="card">
                 <div class="content de">
-                    Swipe nach <b>rechts</b>, wenn du die Übersetzung <b>nicht</b> gewusst hast.
+                    Schiebe die Karte nach <b>rechts</b>, wenn du die Übersetzung <u><b>nicht</b></u> gewusst hast.
                     <span class="number">tutorial</span>
                 </div>
                 <div class="content en">
-                    Swipe nach <b>rechts</b>, wenn du die Übersetzung <b>nicht</b> gewusst hast.
+                    Schiebe die Karte nach <b>rechts</b>, wenn du die Übersetzung <u><b>nicht</b></u> gewusst hast.
                     <span class="number">tutorial</span>
                 </div>
             </div>
@@ -40,11 +44,11 @@
         <div class="cc tutorial unknown active">
             <div class="card">
                 <div class="content de">
-                    Swipe nach <b>oben</b>, um die Übersetzung anzusehen.
+                    Swipe nach <b>oben</b>, um die Übersetzung anzuzeigen.
                     <span class="number">tutorial</span>
                 </div>
                 <div class="content en">
-                    Swipe nach <b>links</b>, wenn Du die Übersetzung gewusst hast.
+                    Schiebe die Karte nach <b>links</b>, wenn Du die Übersetzung gewusst hast.
                     <span class="number">tutorial</span>
                 </div>
             </div>
@@ -52,8 +56,10 @@
     </div>
 
     <div id="shuffled" class="notification">
-        <i class="fa fa-check"></i>
-        Karten wurden gemischt
+        <div class="info">
+            <i class="fa fa-check"></i>
+            Karten wurden gemischt
+        </div>
     </div>
 
     <header>
@@ -64,7 +70,7 @@
 
     <div id="counter">
         <div id="index">
-            <span id="remaining">3</span> / <span id="total">6</span>
+            <span id="knowntotal">0</span> <i class="fa fa-check"></i>  / <!-- <span id="remaining">0</span> Total: --><span id="total">0</span>
         </div>
         <div id="countercontainer">
             <div id="percentage">

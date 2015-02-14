@@ -24,7 +24,7 @@
 							$('.cc.active').addClass('rotated');
 						} else if(distance < 100) {
 							console.log('cancel');
-							$('.cc.active').children('.card').css({"transition": "0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) all", "transform": "rotateX(1deg)"});
+							$('.cc.active').children('.card').css({"transition": "0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) all", "transform": "rotateX(0deg)"});
 						}
 					}
 				} else if (direction == 'down') {
@@ -35,7 +35,7 @@
 					} else if (phase == "end" || phase == "cancel") {
 						if(distance > 100) {
 							console.log('rotate')
-							$('.cc.active').children('.card').css({"transition": "0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) all", "transform": "rotateX(1deg)"});
+							$('.cc.active').children('.card').css({"transition": "0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) all", "transform": "rotateX(0deg)"});
 							$('.cc.active').removeClass('rotated');
 						} else if(distance < 100) {
 							console.log('cancel');
@@ -55,20 +55,30 @@
 
 					if(phase == "end" && distance > 100) {
 						var current = $('.cc.active'),
-							next = current.prevAll('.unknown').first();
+							next = current.prevAll('.unknown:not(.done)').first();
 
 						current.animate({transform: 'translateX(-780px) rotate(-5deg)' }, 700, "easeInOutCubic");
-						current.removeClass('unknown active').addClass('known');
+						current.removeClass('unknown active').addClass('known done');
 						next.addClass('active').removeClass('random');
-						next.children('.card').css({transform: 'translateZ(0px) rotateX(1deg)' });
+						next.children('.card').css({transform: 'translateZ(0px) rotateX(0deg)' });
 
 					} else if( phase == "end" || phase == "cancel") {
 						$('.cc.active').animate({transform: 'translateX(0px)' }, 600, "easeInOutCubic");
 						$('.cc.active').find('.card .good').css('color', 'rgba(92, 184, 92, 0)');
 					}
 
-					if($('.cc.unknown:not(.tutorial)').length < 1) {
-						$('body').addClass('bravo');
+					if ($('body.staronly').length) {
+						if($('.cc.unknown .starred').length < 1) {
+							$('body').addClass('bravo');
+						}
+					} else {
+						if($('.cc.unknown:not(.tutorial)').length < 1) {
+							$('body').addClass('bravo');
+						}
+					}
+
+					if($('.cc.tutorial.active').length < 1) {
+						localStorage.setItem('tutorialdone', JSON.stringify(true));
 					}
 
 				}
@@ -84,12 +94,12 @@
 
 					if(phase == "end" && distance > 100) {
 						var current = $('.cc.active'),
-							next = current.prevAll('.unknown').first();
+							next = current.prevAll('.unknown:not(.done)').first();
 
 						current.animate({transform: 'translateX(780px) rotate(5deg)' }, 700, "easeInOutCubic");
-						current.removeClass('known active').addClass('unknown');
+						current.removeClass('known active').addClass('unknown done');
 						next.addClass('active').removeClass('random');
-						next.first().children('.card').css({transform: 'translateZ(0px) rotateX(1deg)' });
+						next.first().children('.card').css({transform: 'translateZ(0px) rotateX(0deg)' });
 
 					} else if (phase == "cancel" || phase == "end") {
 						$('.cc.active').animate({transform: 'translateX(0px)' }, 600, "easeInOutCubic");
@@ -100,6 +110,10 @@
 						$('body').addClass('bravo');
 					} else {
 						$('body').removeClass('bravo');
+					}
+
+					if($('.cc.tutorial.active').length < 1) {
+						localStorage.setItem('tutorialdone', JSON.stringify(true));
 					}
 
 				}
@@ -140,26 +154,36 @@
 
 	function countCards() {
 		var total = $('.cc:not(.tutorial)').length,
-			remaining = $('.cc.unknown:not(.tutorial)').length;
+			remaining = $('.cc.done:not(.tutorial)').length,
+			knowntotal = $('.cc.known:not(.tutorial)').length;
 
 		console.log(total);
 
 		$('#remaining').text(remaining);
 		$('#total').text(total);
+		$('#knowntotal').text(knowntotal);
 
 		$('#percentage').width(''+ remaining / total * 100 +'%');
 	}
 
 	function countCardsStarred() {
-		var total = $('.cc:not(.tutorial) .starred').length,
-			remaining = $('.cc.unknown:not(.tutorial) .starred').length;
+		var total = $('.cc .starred').length,
+			remaining = $('.cc.done .starred').length;
+			knowntotal = $('.cc.known .starred').length;
 
 		console.log(total);
 
 		$('#remaining').text(remaining);
 		$('#total').text(total);
+		$('#knowntotal').text(knowntotal);
 
 		$('#percentage').width(''+ remaining / total * 100 +'%');
+
+		if (total < 1) {
+			$('body').removeClass('starreditems');
+		} else {
+			$('body').addClass('starreditems');
+		}
 	}
 
 
@@ -167,28 +191,34 @@
 
 $(document).on('ready', function(){
 
-		function countCards() {
+	function countCards() {
 		var total = $('.cc:not(.tutorial)').length,
-			remaining = $('.cc.unknown:not(.tutorial)').length;
+			remaining = $('.cc.done:not(.tutorial)').length,
+			knowntotal = $('.cc.known:not(.tutorial)').length;
 
 		console.log(total);
 
 		$('#remaining').text(remaining);
 		$('#total').text(total);
+		$('#knowntotal').text(knowntotal);
 
 		$('#percentage').width(''+ remaining / total * 100 +'%');
 	}
 
 	function countCardsStarred() {
 		var total = $('.cc:not(.tutorial) .starred').length,
-			remaining = $('.cc.unknown:not(.tutorial) .starred').length;
+			remaining = $('.cc.done:not(.tutorial) .starred').length;
+			knowntotal = $('.cc.known:not(.tutorial) .starred').length;
 
 		console.log(total);
 
 		$('#remaining').text(remaining);
 		$('#total').text(total);
+		$('#knowntotal').text(knowntotal);
 
 		$('#percentage').width(''+ remaining / total * 100 +'%');
+
+		console.log(knowntotal);
 	}
 
 	$(document).on('touchend', 'body.choose #all', function(){
@@ -198,6 +228,12 @@ $(document).on('ready', function(){
 		$('#cards').addClass('active');
 		$('body').addClass('all');
 
+		if($('.cc.done.known:not(.tutorial)').length == $('.cc:not(.tutorial)').length) {
+			repeatAll();
+		} else if($('.cc.done:not(.tutorial)').length == $('.cc:not(.tutorial)').length) {
+			repeatUnknown();
+		}
+
 		countCards();
 	});
 
@@ -206,7 +242,13 @@ $(document).on('ready', function(){
 			$(this).removeClass('active');
 		});
 		$('#cards').addClass('active');
-		$('body').addClass('all');
+		$('body').addClass('all custom');
+
+		if($('.cc.done.known:not(.tutorial)').length == $('.cc:not(.tutorial)').length) {
+			repeatAll();
+		} else if($('.cc.done:not(.tutorial)').length == $('.cc:not(.tutorial)').length) {
+			repeatUnknown();
+		}
 
 		countCards();
 	});
@@ -222,7 +264,7 @@ $(document).on('ready', function(){
 		$('.view').each(function(){
 			$(this).removeClass('active');
 		});
-		$('#editcat').addClass('active');
+		$('#newcat').addClass('active');
 	});
 
 	$(document).on('touchend', 'body.edit #custom', function(){
@@ -240,14 +282,20 @@ $(document).on('ready', function(){
 		$('#cards').addClass('active');
 		$('body').addClass('staronly');
 
-		$('.cc').addClass('known');
-		$('.cc').addClass('unknown');
-		$('.card:not(.starred)').parents('.cc').removeClass('unknown');
-		$('.card.starred').parents('.cc').removeClass('known active');
-		$('.cc.active').removeClass('active');
-		$('.cc.unknown').last().addClass('active').children('.card').css({transform: 'translateZ(0px) rotateX(1deg)' });
+		if($('.cc.done .starred').length == $('.cc .starred').length) {
+			repeatUnknown();
+		}
 
-		$('.cc.known').animate({transform: 'translateX(-780px) rotate(-5deg)' }, 0, "easeInOutCubic");
+		$('.cc').addClass('done');
+		//$('.card:not(.starred)').parents('.cc').addClass('unknown');
+		$('.cc.active').removeClass('active');
+		$('.card.starred').parents('.cc:not(.known)').removeClass('done active');
+		$('.cc:not(.done)').last().addClass('active').children('.card').css({transform: 'translateZ(0px) rotateX(0deg)' });
+
+		//$('.cc.unknown').children('.card').css({transform: 'translateZ(0px) rotateX(0deg)' });
+
+		$('.cc.done').animate({transform: 'translateX(-780px) rotate(-5deg)' }, 0, "easeInOutCubic");
+		$('.cc.done.unknown').animate({transform: 'translateX(780px) rotate(5deg)' }, 0, "easeInOutCubic");
 
 		countCardsStarred();
 	});
@@ -259,6 +307,24 @@ $(document).on('ready', function(){
 		$('#stars').addClass('active');
 	});
 
+
+	$(document).on('touchend', 'body.edit #newvocable', function(){
+		$('.view').each(function(){
+			$(this).removeClass('active');
+		});
+		$('#vocable').addClass('active');
+		$('#editall').css({transform: 'translateX(-200%)' });
+	});
+
+	$(document).on('touchend', '.backtoall', function(){
+		$('.view').each(function(){
+			$(this).removeClass('active');
+		});
+		$('#editall').addClass('active');
+		$('body').removeClass('staronly custom');
+		$('#editall').css({transform: '' });
+	});
+
 	$(document).on('touchend', '.back', function(){
 		$('.view').each(function(){
 			$(this).removeClass('active');
@@ -266,21 +332,13 @@ $(document).on('ready', function(){
 		$('#categories').addClass('active');
 		$('body').removeClass('staronly all custom');
 
-		var retrievedObject = localStorage.getItem('stars');
+		var retrievedObject = localStorage.getItem('stars'),
+			storedObjects = retrievedObject.length;
 
-		if(retrievedObject) {
-			var stars = JSON.parse(retrievedObject);
-
-			console.log(stars);
-
-			$('.word').removeClass('starred');
-			$('.card').removeClass('starred');
-
-			$.each(stars, function(){
-				console.log('#starcard'+ this +'');
-				$('#card'+ this +'').addClass('starred');
-				$('#starcard'+ this +'').addClass('starred');
-			});
+		if(storedObjects > 2) {
+			$('body').addClass('starreditems');
+		} else {
+			$('body').removeClass('starreditems');
 		}
 	});
 
@@ -290,18 +348,28 @@ $(document).on('ready', function(){
 
 	$(document).on('touchend','a.trash',function(e){
 		e.preventDefault();
-		$('#trash').addClass('show');
+		$('.notification.trash').addClass('show');
 		setTimeout(function(){
-			$('#trash').addClass('in');
-		}, 300);
+			$('.notification.trash').addClass('in');
+		}, 100);
+	});
+
+	$(document).on('touchend', '#reset', function(e){
+		e.preventDefault();
+		$('.notification#reseting').addClass('show');
+		setTimeout(function(){
+			$('.notification#reseting').addClass('in');
+		}, 100);
 	});
 
 	$('a.trashing').on('touchend', function(){
 
-		$('#trash').removeClass('in');
+		$('.notification.trash').removeClass('in');
+		$('.notification#reseting').removeClass('in');
 
 		setTimeout(function(){
-			$('#trash').removeClass('show');
+			$('.notification.trash').removeClass('show');
+			$('.notification#reseting').removeClass('show');
 		}, 700);
 
 		if($(this).hasClass('yes')) {
@@ -327,6 +395,7 @@ $(document).on('ready', function(){
 	$(document).on('touchend','a.shuffle',function(e){
 		e.preventDefault();
 		$('.random').shuffle();
+		$('body').addClass('shuffled');
 		$('#viewport').swipeCards();
 		$('#shuffled').addClass('show');
 		setTimeout(function(){
@@ -352,8 +421,8 @@ $(document).on('ready', function(){
 			var thiscc = $(this),
 				thiscard = thiscc.children('.card')
 
-			thiscard.css({transform: 'translateZ(-150px) rotateX(1deg)' });
-			thiscc.removeClass('known').addClass('unknown').css('z-index', 0);
+			thiscard.css({transform: 'translateZ(-150px) rotateX(0deg)' });
+			thiscc.removeClass('known done').addClass('unknown').css('z-index', 0);
 
 			setTimeout(function(){
 				thiscc.animate({transform: 'translateX(0px)' }, 600, "easeInOutCubic");
@@ -361,19 +430,18 @@ $(document).on('ready', function(){
 		});
 
 		$('.cc:not(.tutorial)').each(function(){
-			$(this).removeClass('active').children('.card').css({transform: 'translateZ(-150px) rotateX(1deg)' });
+			$(this).removeClass('active').children('.card').css({transform: 'translateZ(-150px) rotateX(0deg)' });
 		});
 
 		setTimeout(function(){
-			$('.cc.tutorial').last().addClass('active').children('.card').css({transform: 'translateZ(0px) rotateX(1deg)' });
+			$('.cc.tutorial').last().addClass('active').children('.card').css({transform: 'translateZ(0px) rotateX(0deg)' });
 			$('.cc').addClass('random');
 			$('.cc.tutorial, .cc.active').removeClass('random');
-		}, (cards * delay) + 700);
+		}, (cards * delay) + 200);
 	});
 
-	$(document).on('touchend', 'body.all a.all', function(e){
-		e.preventDefault();
 
+	var repeatAll = function(){
 		var cards = $('.cc').length,
 			delay = 20;
 
@@ -381,8 +449,8 @@ $(document).on('ready', function(){
 			var thiscc = $(this),
 				thiscard = thiscc.children('.card')
 
-			thiscard.css({transform: 'translateZ(-150px) rotateX(1deg)' });
-			thiscc.removeClass('known').addClass('unknown').css('z-index', 0);
+			thiscard.css({transform: 'translateZ(-150px) rotateX(0deg)' });
+			thiscc.removeClass('known done').addClass('unknown').css('z-index', 0);
 
 			setTimeout(function(){
 				thiscc.animate({transform: 'translateX(0px)' }, 600, "easeInOutCubic");
@@ -390,13 +458,17 @@ $(document).on('ready', function(){
 		});
 
 		setTimeout(function(){
-			$('.cc:not(.tutorial)').last().addClass('active').children('.card').css({transform: 'translateZ(0px) rotateX(1deg)' });
+			$('.cc:not(.tutorial)').last().addClass('active').children('.card').css({transform: 'translateZ(0px) rotateX(0deg)' });
 			$('.cc').addClass('random');
 			$('.cc.tutorial, .cc.active').removeClass('random');
-
-			countCards();
 		}, (cards * delay) + 300);
 
+		countCards();
+	}
+
+	$(document).on('touchend', 'body.all a.all', function(e){
+		e.preventDefault();
+		repeatAll();
 	});
 
 	$(document).on('touchend', 'body.staronly a.all', function(e){
@@ -409,8 +481,8 @@ $(document).on('ready', function(){
 			var thiscc = $(this).parents('.cc'),
 				thiscard = thiscc.children('.card')
 
-			thiscard.css({transform: 'translateZ(-150px) rotateX(1deg)' });
-			thiscc.removeClass('known').addClass('unknown').css('z-index', 0);
+			thiscard.css({transform: 'translateZ(-150px) rotateX(0deg)' });
+			thiscc.removeClass('known done').addClass('unknown').css('z-index', 0);
 
 			setTimeout(function(){
 				thiscc.animate({transform: 'translateX(0px)' }, 600, "easeInOutCubic");
@@ -418,53 +490,91 @@ $(document).on('ready', function(){
 		});
 
 		setTimeout(function(){
-			$('.cc:not(.tutorial)').last().children('.card').css({transform: 'translateZ(0px) rotateX(1deg)' });
+			$('.cc:not(.tutorial)').last().children('.card').css({transform: 'translateZ(0px) rotateX(0deg)' });
 			$('.cc').addClass('random');
 			$('.cc.tutorial, .cc.active').removeClass('random');
 		}, (cards * delay) + 300);
 
-		$('.cc').addClass('known');
-		$('.cc').addClass('unknown');
-		$('.card:not(.starred)').parents('.cc').removeClass('unknown');
-		$('.card.starred').parents('.cc').removeClass('known active');
-		$('.cc.active').removeClass('active');
-		$('.cc.unknown').last().addClass('active').children('.card').css({transform: 'translateZ(0px) rotateX(1deg)' });
 
-		$('.cc.known').animate({transform: 'translateX(-780px) rotate(-5deg)' }, 0, "easeInOutCubic");
+		$('.cc').addClass('done');
+		//$('.card:not(.starred)').parents('.cc').addClass('unknown');
+		$('.cc.active').removeClass('active');
+		$('.card.starred').parents('.cc:not(.known)').removeClass('done active');
+		$('.cc:not(.done)').last().addClass('active').children('.card').css({transform: 'translateZ(0px) rotateX(0deg)' });
+
+		//$('.cc.unknown').children('.card').css({transform: 'translateZ(0px) rotateX(0deg)' });
+
+		$('.cc.done').animate({transform: 'translateX(-780px) rotate(-5deg)' }, 0, "easeInOutCubic");
+		$('.cc.done.unknown').animate({transform: 'translateX(780px) rotate(5deg)' }, 0, "easeInOutCubic");
 
 		countCardsStarred();
 	});
 
-	$(document).on('touchend', 'a.notknown', function(e){
-		e.preventDefault();
-
+	var repeatUnknown = function(){
 		var cards = $('.cc.unknown').length,
 			delay = 20;
 
-		$('.cc.unknown:not(.tutorial)').each(function(indexInArray){
-			var thiscc = $(this),
-				thiscard = thiscc.children('.card')
+		if ($('body.staronly').length) {
+			$('.card.starred').parents('.cc.unknown').each(function(indexInArray){
+				var thiscc = $(this),
+					thiscard = thiscc.children('.card');
 
-			thiscard.css({transform: 'translateZ(-150px) rotateX(1deg)' });
-			thiscc.css('z-index', 0);
+				thiscard.css({transform: 'translateZ(-150px) rotateX(0deg)' });
+				thiscc.css('z-index', 0).removeClass('done');
 
-			setTimeout(function(){
-				thiscc.animate({transform: 'translateX(0px)' }, 600, "easeInOutCubic");
-			}, indexInArray * delay);
-		});
+				setTimeout(function(){
+					thiscc.animate({transform: 'translateX(0px)' }, 600, "easeInOutCubic");
+				}, indexInArray * delay);
+			});
+			countCardsStarred();
+		} else {
+			$('.cc.unknown:not(.tutorial)').each(function(indexInArray){
+				var thiscc = $(this),
+					thiscard = thiscc.children('.card');
+
+				thiscard.css({transform: 'translateZ(-150px) rotateX(0deg)' });
+				thiscc.css('z-index', 0).removeClass('done');
+
+				setTimeout(function(){
+					thiscc.animate({transform: 'translateX(0px)' }, 600, "easeInOutCubic");
+				}, indexInArray * delay);
+			});
+			countCards();
+		}
 
 		setTimeout(function(){
-			$('.cc.unknown:not(.tutorial)').last().addClass('active').children('.card').css({transform: 'translateZ(0px) rotateX(1deg)' });
+			$('.cc.unknown:not(.tutorial)').last().addClass('active').children('.card').css({transform: 'translateZ(0px) rotateX(0deg)' });
 			$('.cc').addClass('random');
 			$('.cc.tutorial, .cc.active').removeClass('random');
 		}, (cards * delay) + 300);
+	}
 
-		if ($('body.staronly').length) {
-			countCardsStarred();
-		} else {
-			countCards();
-		}
+	$(document).on('touchend', 'a.notknown', function(e){
+		e.preventDefault();
+		repeatUnknown();
 	});
+
+	var addItem = function (stars) {
+		var oldItems = JSON.parse(localStorage.getItem('stars')) || [];
+
+		var newItem = stars
+
+		oldItems.push(newItem);
+
+		localStorage.setItem('stars', JSON.stringify(oldItems));
+	}
+
+	var removeItem = function (stars) {
+		var oldItems = JSON.parse(localStorage.getItem('stars')) || [];
+
+		var index = oldItems.indexOf(stars);
+
+		if (index > -1) {
+    		oldItems.splice(index, 1);
+		}
+
+		localStorage.setItem('stars', JSON.stringify(oldItems));
+	}
 
 	$('a.star').on('touchend', function(){
 
@@ -472,30 +582,6 @@ $(document).on('ready', function(){
 			starCard = star.parents('.card'),
 			starCardID = starCard.data('id');
 
-		var addItem = function (stars) {
-			var oldItems = JSON.parse(localStorage.getItem('stars')) || [];
-
-			var newItem = stars
-
-			oldItems.push(newItem);
-
-			localStorage.setItem('stars', JSON.stringify(oldItems));
-		}
-
-		var removeItem = function (stars) {
-			var oldItems = JSON.parse(localStorage.getItem('stars')) || [];
-
-			var index = oldItems.indexOf(stars);
-
-			if (index > -1) {
-    			oldItems.splice(index, 1);
-			}
-
-			console.log(oldItems)
-
-			localStorage.setItem('stars', JSON.stringify(oldItems));
-		}
-
 		if(starCard.hasClass('starred')) {
 			starCard.removeClass('starred');
 			removeItem(starCardID);
@@ -507,38 +593,12 @@ $(document).on('ready', function(){
 		console.log(starCardID);
 	});
 
-	$('li.word a').on('touchend', function(){
+	$('li.starword a').on('touchend', function(){
 
 		var star = $(this),
 			starCard = star.parents('.word'),
 			starCardID = starCard.data('id');
 
-		var addItem = function (stars) {
-			var oldItems = JSON.parse(localStorage.getItem('stars')) || [];
-
-			var newItem = stars
-
-			oldItems.push(newItem);
-
-			console.log(oldItems);
-
-			localStorage.setItem('stars', JSON.stringify(oldItems));
-		}
-
-		var removeItem = function (stars) {
-			var oldItems = JSON.parse(localStorage.getItem('stars')) || [];
-
-			var index = oldItems.indexOf(stars);
-
-			if (index > -1) {
-    			oldItems.splice(index, 1);
-			}
-
-			console.log(oldItems);
-
-			localStorage.setItem('stars', JSON.stringify(oldItems));
-		}
-
 		if(starCard.hasClass('starred')) {
 			starCard.removeClass('starred');
 			removeItem(starCardID);
@@ -549,24 +609,75 @@ $(document).on('ready', function(){
 
 		console.log(starCardID);
 	});
+
+	var tutorialRetrieved = localStorage.getItem('tutorialdone');
+
+	if(tutorialRetrieved) {
+		var cards = $('.cc').length,
+			delay = 20;
+
+		$('.cc.tutorial').each(function(indexInArray){
+			var thiscc = $(this);
+
+			thiscc.css({transform: 'translateX(-780px)' }).removeClass('known active').addClass('unknown').css('z-index', 0);
+		});
+
+		setTimeout(function(){
+			$('.cc:not(.tutorial)').last().addClass('active').children('.card').css({transform: 'translateZ(0px) rotateX(0deg)' });
+			$('.cc').addClass('random');
+			$('.cc.tutorial, .cc.active').removeClass('random');
+		}, (cards * delay) + 300);
+
+		countCards();
+	}
+
 
 	var retrievedObject = localStorage.getItem('stars');
 
 	if(retrievedObject) {
 		var stars = JSON.parse(retrievedObject);
 
-		console.log(stars);
+		$('body').addClass('starreditems');
 
 		$.each(stars, function(){
 			console.log('#card'+ this +'');
 			$('#card'+ this +'').addClass('starred');
 			$('#starcard'+ this +'').addClass('starred');
 		});
+
+		if(retrievedObject.length > 2) {
+			$('body').addClass('starreditems');
+		} else {
+			$('body').removeClass('starreditems');
+		}
 	}
 
 	$('#edit').on('touchend', function(){
 		$('body').toggleClass('edit');
 		$('body').toggleClass('choose');
+
+		var retrievedObject = localStorage.getItem('stars');
+
+		if(retrievedObject) {
+			var stars = JSON.parse(retrievedObject);
+
+			$('body').addClass('starreditems');
+
+			$('.word').removeClass('starred');
+			$('.card').removeClass('starred');
+
+			$.each(stars, function(){
+				console.log('#starcard'+ this +'');
+				$('#card'+ this +'').addClass('starred');
+				$('#starcard'+ this +'').addClass('starred');
+			});
+
+			if(retrievedObject.length > 2) {
+				$('body').addClass('starreditems');
+			} else {
+				$('body').removeClass('starreditems');
+			}
+		}
 	});
 
 
